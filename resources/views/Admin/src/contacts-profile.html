@@ -1,0 +1,391 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Create Project"})
+
+    <!-- Dropzone Plugin Css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css">
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Profile"})
+
+            <main class="p-6">
+                <div>
+                    <div class="grid lg:grid-cols-3 gap-5">
+                        <div class="lg:col-span-2 space-y-5">
+                            <div class="card">
+                                <div class="bg-picture p-5">
+                                    <div class="flex flex-wrap sm:flex-nowrap items-start gap-6">
+                                        <img src="assets/images/users/profile.jpg" class="flex-shrink rounded-full h-24 border-4 dark:border-gray-700" alt="profile-image">
+
+                                        <div class="flex-grow overflow-hidden">
+                                            <h4 class="text-lg dark:text-white">Alexandra Clarkson</h4>
+                                            <p class="text-gray-400 font-medium"><i>Web Designer</i></p>
+                                            <p class="mt-4 text-sm mb-6">Hi I'm Alexandra Clarkson,has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature it over 2000 years to popular belief Ipsum is not simplyrandom text.</p>
+
+                                            <div class="flex flex-wrap items-center gap-3">
+                                                <div class="border-2 w-8 h-8 rounded-full border-purple text-purple flex items-center justify-center">
+                                                    <a href="javascript: void(0);"><i class="mdi mdi-facebook"></i></a>
+                                                </div>
+                                                <div class="border-2 w-8 h-8 rounded-full border-danger text-danger flex items-center justify-center">
+                                                    <a href="javascript: void(0);"><i class="mdi mdi-google"></i></a>
+                                                </div>
+                                                <div class="border-2 w-8 h-8 rounded-full border-info text-info flex items-center justify-center">
+                                                    <a href="javascript: void(0);"><i class="mdi mdi-twitter"></i></a>
+                                                </div>
+                                                <div class="border-2 w-8 h-8 rounded-full border-secondary text-secondary flex items-center justify-center">
+                                                    <a href="javascript: void(0);"><i class="mdi mdi-github"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card p-5">
+                                <form method="post">
+                                    <span>
+                                        <textarea rows="3" class="form-textarea mb-2" placeholder="Post a new message"></textarea>
+                                    </span>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <div>
+                                                <a href="#"><i class="mdi mdi-account text-lg text-gray-400"></i></a>
+                                            </div>
+                                            <div>
+                                                <a href="#"><i class="mdi mdi-navigation-variant text-lg text-gray-400"></i></a>
+                                            </div>
+                                            <div>
+                                                <a href="#"><i class="mdi mdi-camera text-lg text-gray-400"></i></a>
+                                            </div>
+                                            <div>
+                                                <a href="#"><i class="mdi mdi-emoticon-happy-outline text-lg text-gray-400"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="pt-1 float-end">
+                                            <a href="" class="btn bg-primary text-white py-1 px-3 hover:bg-primary/80 transition-all duration-500">Send</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="card p-5">
+                                <div class="card-body">
+                                    <div class="flex items-start gap-3">
+                                        <img src="assets/images/users/user-1.jpg" alt="" class="flex-shrink rounded h-10">
+                                        <div class="flex-grow">
+                                            <h5><a href="#" class="text-base text-dark dark:text-white">Adam Jansen</a><small class="ms-1 text-xs text-gray-400">about 2 minuts ago</small></h5>
+                                            <p class="mt-2">Story based around the idea of time lapse, animation to post soon!</p>
+                                            <div class="flex items-center gap-1 mt-4">
+                                                <a href="#">
+                                                    <img src="assets/images/small/img-1.jpg" class="h-14 w-14 rounded">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/images/small/img-2.jpg" class="h-14 w-14 rounded">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/images/small/img-3.jpg" class="h-14 w-14 rounded">
+                                                </a>
+                                            </div>
+                                            <div class="pt-2 mb-5 flex items-center gap-2">
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-down-outline"></i></a>
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500">Reply</a>
+                                            </div>
+
+                                            <div class="flex items-start mb-2">
+                                                <img src="assets/images/users/user-3.jpg" alt="" class="flex-shrink rounded h-10 me-2">
+                                                <div class="flex-grow">
+                                                    <h5 class="mt-0"><a href="#" class="text-base text-dark dark:text-white">John Smith</a><small class="ms-1 text-xs text-gray-400">about 1 hour ago</small></h5>
+                                                    <p class="text-sm text-gray-400">Wow impressive!</p>
+
+                                                    <div class="pt-2 mb-5 flex items-center gap-2">
+                                                        <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                        <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-down-outline"></i></a>
+                                                        <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500">Reply</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start mb-2">
+                                                <img src="assets/images/users/user-4.jpg" alt="" class="flex-shrink rounded h-10 me-2">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mt-0"><a href="#" class="text-base text-dark dark:text-white">Matt Cheuvront</a><small class="ms-1 text-xs text-gray-400">about 2 hour ago</small></h5>
+                                                    <p class="text-sm text-gray-400">Wow, that is really nice.</p>
+
+                                                    <div class="pt-2 mb-5 flex items-center gap-2">
+                                                        <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                        <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-down-outline"></i></a>
+                                                        <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500">Reply</a>
+                                                    </div>
+
+                                                    <div class="flex items-start mb-2">
+                                                        <img src="assets/images/users/user-5.jpg" alt="" class="flex-shrink rounded h-10 me-2">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="mt-0"><a href="#" class="text-base text-dark dark:text-white">Stephanie Walter</a><small class="ms-1 text-xs text-gray-400">about 3 hour ago</small></h5>
+                                                            <p class="text-sm text-gray-400">Nice work, makes me think of The Money Pit.</p>
+
+                                                            <div class="pt-2 mb-5 flex items-center gap-2">
+                                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-down-outline"></i></a>
+                                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500">Reply</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  media -->
+
+                                    <div class="flex items-start mb-2">
+                                        <img src="assets/images/users/user-6.jpg" alt="" class="flex-shrink rounded h-10 me-2">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-0"><a href="#" class="text-base text-dark dark:text-white">John Smith</a><small class="ms-1 text-xs text-gray-400">about 4 hour ago</small></h5>
+                                            <p class="text-sm text-gray-400">i'm in the middle of a timelapse animation myself! (Very different though.) Awesome stuff.</p>
+
+                                            <div class="pt-2 mb-5 flex items-center gap-2">
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-down-outline"></i></a>
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500">Reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start mb-2">
+                                        <img src="assets/images/users/user-7.jpg" alt="" class="flex-shrink rounded h-10 me-2">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-0"><a href="#" class="text-base text-dark dark:text-white">Nicolai Larson</a><small class="ms-1 text-xs text-gray-400">about 10 hour ago</small></h5>
+                                            <p class="text-sm text-gray-400">The parallax is a little odd but O.o that house build is awesome!!</p>
+
+                                            <div class="pt-2 mb-5 flex items-center gap-2">
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500"><i class="mdi mdi-thumb-down-outline"></i></a>
+                                                <a href="#" class="text-gray-400 hover:text-primary transition-all duration-500">Reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <a href="" class="text-danger"><i class="mdi mdi-spin mdi-loading me-1"></i> Load more </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="card">
+                                <div>
+                                    <div class="flex items-center justify-between p-5">
+                                        <h4 class="text-lg dark:text-white">My Team Members</h4>
+                                        <div>
+                                            <button data-fc-target="dropdown-target1" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                <i class="mdi mdi-dots-vertical text-xl"></i>
+                                            </button>
+    
+                                            <div id="dropdown-target1" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                    Action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Another action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Something else
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Separated link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-5 p-10 pt-3">
+                                        <div>
+                                            <a href="#" class="flex items-center gap-3 px-2 transition-all hover:bg-gray-50 hover:dark:bg-gray-700/50">
+                                                <div>
+                                                    <img src="assets/images/users/user-2.jpg" alt="" class="rounded-full h-10">
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Michael Zenaty</h5>
+                                                    <p class="text-gray-400">CEO</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-center gap-3 px-2 transition-all hover:bg-gray-50 hover:dark:bg-gray-700/50">
+                                                <div>
+                                                    <img src="assets/images/users/user-3.jpg" alt="" class="rounded-full h-10">
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">James Neon</h5>
+                                                    <p class="text-gray-400">Web Designer</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-center gap-3 px-2 transition-all hover:bg-gray-50 hover:dark:bg-gray-700/50">
+                                                <div>
+                                                    <img src="assets/images/users/user-5.jpg" alt="" class="rounded-full h-10">
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">John Smith</h5>
+                                                    <p class="text-gray-400">Web Developer</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-center gap-3 px-2 transition-all hover:bg-gray-50 hover:dark:bg-gray-700/50">
+                                                <div>
+                                                    <img src="assets/images/users/user-6.jpg" alt="" class="rounded-full h-10">
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Michael Zenaty</h5>
+                                                    <p class="text-gray-400">Programmer</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-center gap-3 px-2 transition-all hover:bg-gray-50 hover:dark:bg-gray-700/50">
+                                                <div>
+                                                    <img src="assets/images/users/user-1.jpg" alt="" class="rounded-full h-10">
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Mat Helme</h5>
+                                                    <p class="text-gray-400">Manager</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div>
+                                    <div class="flex items-center justify-between p-5">
+                                        <h4 class="text-base dark:text-white"><i class="mdi mdi-notification-clear-all me-1"></i> Upcoming Reminders</h4>
+                                        <div>
+                                            <button data-fc-target="dropdown-target2" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                <i class="mdi mdi-dots-vertical text-xl"></i>
+                                            </button>
+    
+                                            <div id="dropdown-target2" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                    Action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Another action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Something else
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Separated link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-5 p-10 pt-3">
+                                        <div>
+                                            <a href="#" class="flex items-start gap-3">
+                                                <div>
+                                                    <i class="mdi mdi-circle text-primary"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Meet Manager</h5>
+                                                    <span class="text-gray-400">February 24, 2019 - 10:30am to 12:45pm</span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-start gap-3">
+                                                <div>
+                                                    <i class="mdi mdi-circle text-success"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Project Discussion</h5>
+                                                    <span class="text-gray-400">February 25, 2019 - 10:30am to 12:45pm</span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-start gap-3">
+                                                <div>
+                                                    <i class="mdi mdi-circle text-pink"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Meet Manager</h5>
+                                                    <span class="text-gray-400">February 26, 2019 - 10:30am to 12:45pm</span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-start gap-3">
+                                                <div>
+                                                    <i class="mdi mdi-circle text-muted"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Project Discussion</h5>
+                                                    <span class="text-gray-400">February 27, 2019 - 10:30am to 12:45pm</span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="flex items-start gap-3">
+                                                <div>
+                                                    <i class="mdi mdi-circle text-danger"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="text-base dark:text-white">Meet Manager</h5>
+                                                    <span class="text-gray-400">February 28, 2019 - 10:30am to 12:45pm</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

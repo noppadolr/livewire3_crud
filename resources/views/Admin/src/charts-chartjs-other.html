@@ -1,0 +1,119 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Bubble Chartjs"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Bubble Chartjs"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Bubble</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="bubble-example" data-colors="#3e60d5,#47ad77"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Donut</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="donut-example" data-colors="#3e60d5,#fa5c7c,#47ad77,#ebeff2"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Pie</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="pie-example" data-colors="#3e60d5,#fa5c7c,#47ad77,#ebeff2, #f56f36"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Polar Area</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="polar-area-example" data-colors="#3e60d5,#fa5c7c,#47ad77,#ebeff2, #f56f36"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Radar</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="radar-example" data-colors="#3e60d5,#47ad77"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Scatter</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="scatter-example" data-colors="#3e60d5,#47ad77"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Stacked Bar/Line</h4>
+                            <div class="mt-3" style="height: 320px;">
+                                <canvas id="bar-line-example" data-colors="#3e60d5,#47ad77"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Chart.js -->
+    <script src="assets/libs/chart.js/chart.min.js"></script>
+
+    <!-- Chart.js Other Demo js -->
+    <script src="assets/js/pages/chartjs-other.init.js"></script>
+
+
+
+</body>
+
+</html>

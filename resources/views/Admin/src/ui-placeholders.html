@@ -1,0 +1,150 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Popover"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Placeholders"})
+
+            <main class="p-6">
+
+                <div class="grid lg:grid-cols-2 grid-cols-1 gap-6">
+
+                    <div class="flex flex-col gap-6">
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-6">Placeholders</h4>
+
+                                <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                                    <div>
+                                        <div class="card border dark:border-gray-700 shadow-none">
+                                            <img src="assets/images/small/img-1.jpg" class="w-full h-auto rounded-t" alt="...">
+
+                                            <div class="p-6">
+                                                <h5 class="card-title mb-4">Card title</h5>
+                                                <p class="text-gray-500 dark:text-gray-400 mb-4">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                                </p>
+                                                <a href="#" class="btn bg-primary text-white">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="card border dark:border-gray-700 shadow-none" aria-hidden="true">
+                                            <img src="assets/images/small/img-3.jpg" class="w-full h-auto rounded-t" alt="...">
+
+                                            <div class="p-6">
+                                                <h5 class="card-title mb-4">
+                                                    <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait animate-pulse w-1/2"></span>
+                                                </h5>
+                                                <p>
+                                                    <span class="bg-secondary/20 inline-block h-3.5 align-middle cursor-wait animate-pulse w-9/12"></span>
+                                                    <span class="bg-secondary/20 inline-block h-3.5 align-middle cursor-wait animate-pulse w-1/4"></span>
+                                                    <span class="bg-secondary/20 inline-block h-3.5 align-middle cursor-wait animate-pulse w-1/4"></span>
+                                                    <span class="bg-secondary/20 inline-block h-3.5 align-middle cursor-wait animate-pulse w-2/3"></span>
+                                                    <span class="bg-secondary/20 inline-block h-3.5 align-middle cursor-wait animate-pulse w-4/5"></span>
+                                                </p>
+                                                <a href="#" class="btn bg-primary/60 cursor-default w-1/2 h-9 mt-4" disabled></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card-end -->
+
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-4">Width</h4>
+
+                                <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait w-1/2 col-6"></span>
+                                <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait w-9/12"></span>
+                                <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait w-3/12"></span>
+                            </div>
+                        </div> <!-- card-end -->
+
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-6">Animation</h4>
+
+                                <span class="bg-current opacity-30 inline-block h-3.5 align-middle cursor-wait animate-pulse w-full"></span>
+                                <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait w-full mt-3"></span>
+                            </div>
+                        </div> <!-- card-end -->
+                    </div> <!-- flex-end -->
+
+                    <div class="flex flex-col gap-6">
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-6">Color</h4>
+
+                                <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-primary/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-secondary/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-success/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-danger/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-warning/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-info/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-light/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-dark/50 inline-block h-3.5 align-middle cursor-wait w-full"></span>
+                            </div>
+                        </div> <!-- card-end -->
+
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-6">How it works</h4>
+
+                                <span class="bg-current opacity-40 inline-block h-3.5 align-middle cursor-wait w-1/2"></span>
+                                <div>
+                                    <a href="#" class="btn bg-primary/60 cursor-default w-4/12 h-9 mt-4" disabled></a>
+                                </div>
+                            </div>
+                        </div> <!-- card-end -->
+
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-6">Sizing</h4>
+
+                                <span class="bg-current opacity-40 inline-block h-5 align-middle cursor-wait w-full"></span>
+                                <span class="bg-current opacity-40 inline-block h-4 align-middle cursor-wait w-full"></span>
+                                <span class="bg-current opacity-40 inline-block h-3 align-middle cursor-wait w-full"></span>
+                                <span class="bg-current opacity-40 inline-block h-2 align-middle cursor-wait w-full"></span>
+                            </div>
+                        </div> <!-- card-end -->
+                    </div> <!-- flex-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+// 
+// _theme-config.scss (:root variable)
+// 
+
+// Font Family
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+
+// ===================================================== //
+// ======= Real Time Customistion :root Variable ======= //
+// ===================================================== //
+
+:root {
+    --tw-body-font-family:           theme(fontFamily.base);
+    --tw-heading-font-family:        theme(fontFamily.heading);
+    --tw-body-bg:                    theme(backgroundColor.gray.100);
+    --tw-body-color:                 theme(colors.gray.800);
+
+    --tw-sidenav-width:             240px;
+    --tw-sidenav-width-md:          160px;
+    --tw-sidenav-width-sm:           70px;
+
+    --tw-topbar-height:              70px;
+
+    --tw-menu-item-padding-x:        10px;
+    --tw-menu-item-gap:               5px;
+
+    --tw-menu-link-padding-x:        15px;
+    --tw-menu-link-padding-y:        10px;
+
+    --tw-menu-link-item-gap:         10px;
+
+    --tw-menu-item-icon-size:        18px;
+    --tw-menu-item-font-size:        16px;
+}
+
+:root {
+    &:is([data-mode="dark"]) {
+        --tw-body-bg:                    theme(backgroundColor.gray.900);
+        --tw-body-color:                 theme(colors.gray.100);
+    }
+}
+
+// Light Menu
+html[data-menu-color="light"] {
+    --tw-menu-bg:                                white;
+    --tw-menu-item-color:                       rgb(108, 117, 125);
+    --tw-menu-item-active-color:                theme(backgroundColor.primary);
+    --tw-menu-item-hover-color:                 theme(backgroundColor.primary);
+}
+
+// Dark Menu
+html[data-menu-color="dark"],
+html[data-mode="dark"][data-menu-color="light"] {
+    --tw-menu-bg:                               theme(backgroundColor.gray.800);
+    --tw-menu-item-color:                       rgb(144, 151, 167);
+    --tw-menu-item-active-color:                rgb(200, 205, 220);
+    --tw-menu-item-hover-color:                 rgb(200, 205, 220);
+}
+
+// Brand Menu
+html[data-menu-color="brand"] {
+    --tw-menu-bg:                             theme(backgroundColor.primary);
+    --tw-menu-item-color:                     theme(colors.gray.100);
+    --tw-menu-item-active-color:              theme(colors.white);
+    --tw-menu-item-hover-color:               theme(colors.white);
+}
+
+// Gradient Menu
+html[data-menu-color="gradient"] {
+    --tw-menu-bg:                             linear-gradient(270deg,#4095d8, #5b69bc); // linear-gradient(135deg, #5b69bc 0%, #546ee5 60%)
+    --tw-menu-item-color:                     rgb(206, 220, 228);
+    --tw-menu-item-active-color:              rgb(255, 255, 255);
+    --tw-menu-item-hover-color:               rgb(255, 255, 255);
+}
+
+// Light Topbar
+html[data-topbar-color="light"] {
+    --tw-topbar-bg:                           theme(backgroundColor.gray.100);
+    --tw-topbar-item-color:                   rgb(108, 117, 125);
+    --tw-topbar-item-active-color:            theme(backgroundColor.primary);
+    --tw-topbar-item-hover-color:             theme(backgroundColor.primary);
+}
+
+// Dark Topbar
+html[data-topbar-color="dark"],
+html[data-mode="dark"][data-topbar-color="light"] {
+    --tw-topbar-bg:                           theme(backgroundColor.gray.900);
+    --tw-topbar-item-color:                   rgb(131, 145, 162);
+    --tw-topbar-item-active-color:            rgb(188, 206, 228);
+    --tw-topbar-item-hover-color:             rgb(188, 206, 228);
+}

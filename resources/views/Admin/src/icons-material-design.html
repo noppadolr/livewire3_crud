@@ -1,0 +1,135 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Material Design Icons"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Material Design Icons"})
+
+            <main class="p-6">
+
+               <div class="grid grid-cols-1 gap-6">
+                <div class="card">
+
+                    <div class="p-6">
+                        <h4 class="card-title">New Icons</h4>
+                        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 icons-list-demo" id="newIcons"></div>
+                    </div>
+                </div> <!-- end card -->
+
+                <div class="card">
+                    <div class="p-6">
+                        <h4 class="card-title mb-4">All Icons</h4>
+                        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 icons-list-demo" id="icons"></div>
+                    </div>
+                </div> <!-- end card -->
+
+                <div class="card">
+
+                    <div class="p-6">
+                        <h4 class="card-title">Size</h4>
+
+                        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 icons-list-demo">
+                            <div>
+                                <i class="mdi mdi-18px mdi-account"></i> mdi-18px
+                            </div>
+
+                            <div>
+                                <i class="mdi mdi-24px mdi-account"></i> mdi-24px
+                            </div>
+
+                            <div>
+                                <i class="mdi mdi-36px mdi-account"></i> mdi-36px
+                            </div>
+
+                            <div>
+                                <i class="mdi mdi-48px mdi-account"></i> mdi-48px
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="p-6">
+                        <h4 class="card-title">Rotate</h4>
+
+                        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 icons-list-demo">
+                            <div>
+                                <i class="mdi mdi-rotate-45 mdi-account"></i> mdi-rotate-45
+                            </div>
+                            <div>
+                                <i class="mdi mdi-rotate-90 mdi-account"></i> mdi-rotate-90
+                            </div>
+                            <div>
+                                <i class="mdi mdi-rotate-135 mdi-account"></i> mdi-rotate-135
+                            </div>
+                            <div>
+                                <i class="mdi mdi-rotate-180 mdi-account"></i> mdi-rotate-180
+                            </div>
+                            <div>
+                                <i class="mdi mdi-rotate-225 mdi-account"></i> mdi-rotate-225
+                            </div>
+                            <div>
+                                <i class="mdi mdi-rotate-270 mdi-account"></i> mdi-rotate-270
+                            </div>
+                            <div>
+                                <i class="mdi mdi-rotate-315 mdi-account"></i> mdi-rotate-315
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="p-6">
+                        <h4 class="card-title">Spin</h4>
+
+                        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 icons-list-demo">
+                            <div>
+                                <i class="mdi mdi-spin mdi-loading"></i> mdi-spin
+                            </div>
+                            <div>
+                                <i class="mdi mdi-spin mdi-star"></i> mdi-spin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+    
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Material Design Icons Demo js -->
+    <script src="assets/js/pages/icons-material-design.init.js"></script>
+
+</body>
+
+</html>

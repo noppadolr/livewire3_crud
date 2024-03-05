@@ -1,0 +1,72 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Bubble Chart"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Bubble Chart"})
+
+            <main class="p-6">
+
+                <div class="grid xl:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Simple Bubble Chart</h4>
+                            <div dir="ltr">
+                                <div id="simple-bubble" class="apex-charts" data-colors="#3e60d5,#ffbc00,#fa5c7c"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">3D Bubble Chart</h4>
+                            <div dir="ltr">
+                                <div id="second-bubble" class="apex-charts" data-colors="#3e60d5,#47ad77,#fa5c7c,#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                </div><!-- end Grid -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/apex-bubble.init.js"></script>
+
+</body>
+
+</html>

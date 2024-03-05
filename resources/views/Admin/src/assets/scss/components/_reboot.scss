@@ -1,0 +1,41 @@
+//
+// reboot.scss
+//
+
+html {
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    color: $body-color;
+    background-color: $body-bg;
+    font-family: $body-font-family;
+    -webkit-tap-highlight-color: transparent;
+    @apply antialiased font-normal text-sm leading-normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    @apply font-semibold;
+}
+
+code {
+    @apply text-[#ff8acc];
+}
+
+:root {
+    &:is([data-mode="dark"]) {
+        color-scheme: dark;
+    }
+}
+
+canvas {
+    display: inherit;
+}

@@ -1,0 +1,133 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "FAQ"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"FAQs"})
+
+            <main class="p-6">
+                <div class="card py-10 md:px-28 sm:px-10 px-5">
+
+                    <div class="flex items-center justify-center mb-16">
+                        <div class="max-w-2xl text-center">
+                            <h1 class="text-xl font-semibold mb-5 dark:text-white">Frequently Asked Questions</h1>
+                            <p class="text-gray-400">Nisi praesentium similique totam odio obcaecati, reprehenderit, dignissimos rem temporibus ea inventore alias! Beatae animi nemo ea tempora, temporibus laborum facilis ut!</p>
+                            <div class="flex flex-wrap items-center justify-center gap-2 mt-6">
+                                <button type="button" class="btn bg-success text-white">Email us your question</button><!-- Botton End -->
+                                <button type="button" class="btn bg-info text-white">Send us a tweet</button><!-- Botton End -->
+                            </div>
+                        </div>
+                    </div><!-- Flex End -->
+
+                    <div class="grid lg:grid-cols-2 gap-4">
+                        <div data-fc-type="accordion" class="space-y-4">
+                            <div class="card border dark:border-gray-600">
+                                <button data-fc-type="collapse" class="bg-gray-100 dark:bg-gray-700/50 p-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition dark:text-white">
+                                    What is Lorem Ipsum?
+                                </button>
+                                <div class="w-full overflow-hidden transition-[height] duration-300">
+                                    <div class="p-3">
+                                        <p class="text-gray-800 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                        <p class="text-gray-800 dark:text-gray-400 pt-5">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border dark:border-gray-600">
+                                <button data-fc-type="collapse" class="bg-gray-100 dark:bg-gray-700/50 p-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition dark:text-white">
+                                    Is safe use Lorem Ipsum?
+                                </button>
+                                <div class="hidden w-full overflow-hidden transition-[height] duration-300">
+                                    <div class="p-3">
+                                        <p class="text-gray-800 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                        <p class="text-gray-800 dark:text-gray-400 pt-5">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border dark:border-gray-600">
+                                <button data-fc-type="collapse" class="bg-gray-100 dark:bg-gray-700/50 p-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition dark:text-white">
+                                    Why use Lorem Ipsum?
+                                </button>
+                                <div class="hidden w-full overflow-hidden transition-[height] duration-300">
+                                    <div class="p-3">
+                                        <p class="text-gray-800 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                        <p class="text-gray-800 dark:text-gray-400 pt-5">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-fc-type="accordion" class="space-y-4">
+                            <div class="card border dark:border-gray-600">
+                                <button data-fc-type="collapse" class="bg-gray-100 dark:bg-gray-700/50 p-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition dark:text-white">
+                                    License & Copyright
+                                </button>
+                                <div class="w-full overflow-hidden transition-[height] duration-300">
+                                    <div class="p-3">
+                                        <p class="text-gray-800 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                        <p class="text-gray-800 dark:text-gray-400 pt-5">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border dark:border-gray-600">
+                                <button data-fc-type="collapse" class="bg-gray-100 dark:bg-gray-700/50 p-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition dark:text-white">
+                                    How many variations exist?
+                                </button>
+                                <div class="hidden w-full overflow-hidden transition-[height] duration-300">
+                                    <div class="p-3">
+                                        <p class="text-gray-800 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                        <p class="text-gray-800 dark:text-gray-400 pt-5">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border dark:border-gray-600">
+                                <button data-fc-type="collapse" class="bg-gray-100 dark:bg-gray-700/50 p-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition dark:text-white">
+                                    Why use Lorem Ipsum?
+                                </button>
+                                <div class="hidden w-full overflow-hidden transition-[height] duration-300">
+                                    <div class="p-3">
+                                        <p class="text-gray-800 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                        <p class="text-gray-800 dark:text-gray-400 pt-5">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

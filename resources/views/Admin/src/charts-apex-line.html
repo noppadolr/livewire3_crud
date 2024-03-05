@@ -1,0 +1,158 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "line chart"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"line chart"})
+
+            <main class="p-6">
+
+                <div class="grid xl:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Simple line chart</h4>
+                            <div dir="ltr">
+                                <div id="line-chart" data-colors="#ffbc00"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Line with Data Labels</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-datalabel" data-colors="#6c757d,#3e60d5"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Zoomable Timeseries</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-zoomable" data-colors="#fa5c7c"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Line Chart with Annotations</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-annotations" data-colors="#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Syncing charts</h4>
+                            <div id="line-chart-syncing2" data-colors="#3e60d5"></div>
+                            <div dir="ltr">
+                                <div id="line-chart-syncing" data-colors="#6c757d"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Gradient Line Chart</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-gradient" class="apex-charts"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Missing / Null values</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-missing" data-colors="#ffbc00,#47ad77,#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Dashed Line Chart</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-dashed" data-colors="#6c757d,#47ad77,#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Stepline Chart</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-stepline" data-colors="#47ad77"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Brush Chart</h4>
+                            <div dir="ltr">
+                                <div id="chart-line2" data-colors="#3e60d5"></div>
+                                <div id="chart-line" data-colors="#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Realtime Chart</h4>
+                            <div dir="ltr">
+                                <div id="line-chart-realtime" data-colors="#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                </div> <!-- end Grid -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart line Demo js -->
+    <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+    <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
+    
+    <script src="assets/js/pages/apex-line.init.js"></script>
+
+</body>
+
+</html>

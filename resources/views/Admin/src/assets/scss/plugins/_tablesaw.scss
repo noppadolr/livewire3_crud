@@ -1,0 +1,92 @@
+// 
+// tablesaw.scss
+//
+
+.tablesaw {
+    thead {
+        background: none;
+        background-image: none;
+        border: none;
+
+        th {
+            text-shadow: none;
+        }
+
+        tr:first-child th {
+            border: none;
+            font-weight: 500;
+            font-family: $body-font-family;
+        }
+    }
+
+    td {
+        @apply border-t border-gray-100 dark:border-gray-700;
+    }
+}
+
+.tablesaw td,
+.tablesaw tbody th {
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px !important;
+}
+
+.tablesaw-stack tbody tr,
+.tablesaw tbody tr {
+    border-bottom: none;
+}
+
+.tablesaw-bar .btn-select.btn-small:after,
+.tablesaw-bar .btn-select.btn-micro:after {
+    font-size: 8px;
+    padding-right: 10px;
+}
+
+.tablesaw-swipe .tablesaw-cell-persist {
+    box-shadow: none;
+    @apply border-gray-100 dark:border-gray-700;
+}
+
+.tablesaw-enhanced .tablesaw-bar .btn {
+    @apply dark:text-white;
+    text-shadow: none;
+    background-image: none;
+    text-transform: none;
+    padding: 3px 10px;
+    
+    &:after {
+        display: none;
+    }
+}
+
+.tablesaw-enhanced .tablesaw-bar .btn:hover,
+.tablesaw-enhanced .tablesaw-bar .btn:focus,
+.tablesaw-enhanced .tablesaw-bar .btn:active {
+    color: #71b6f9 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-image: none;
+}
+
+.tablesaw-columntoggle-popup {
+    .btn-group {
+        display: block;
+    }
+}
+
+.tablesaw-swipe .tablesaw-swipe-cellpersist {
+    @apply border-e-2 border-gray-100 dark:border-gray-700;
+}
+
+.tablesaw-sortable-btn {
+    cursor: pointer;
+}
+
+.tablesaw-swipe-cellpersist {
+    width: auto !important;
+}
+
+.tablesaw-bar-section label {
+    color: inherit;
+    margin-bottom: .5rem;
+}

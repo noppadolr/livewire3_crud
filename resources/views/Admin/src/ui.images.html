@@ -1,0 +1,79 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Images"})
+
+            <main class="p-6">
+
+                <div class="card">
+                    <div class="p-6">
+                        <div class="flex flex-wrap 2xl:flex-nowrap gap-6">
+
+                            <div class="2xl:w-1/2 w-full">
+                                <h4 class="card-title mb-6">Images shapes</h4>
+
+                                <div class="flex flex-wrap items-end 2xl:gap-10 gap-6">
+                                    <img src="assets/images/small/img-1.jpg" alt="image" class="rounded w-52">
+
+                                    <img src="assets/images/users/user-6.jpg" alt="image" class="rounded-full w-32">
+
+                                    <img src="assets/images/small/img-3.jpg" alt="image" class="rounded p-1 bg-gray-100 dark:bg-gray-700 dark:border-gray-600 border w-52">
+                                </div>
+                            </div> <!-- end -->
+
+                            <div class="2xl:w-1/2 w-full">
+                                <h4 class="card-title mb-6">Image sizes</h4>
+
+                                <div class="flex flex-wrap items-end gap-6">
+                                    <img src="assets/images/users/user-5.jpg" alt="image" class="h-6 w-6 rounded">
+
+                                    <img src="assets/images/users/user-5.jpg" alt="image" class="h-9 w-9 rounded">
+
+                                    <img src="assets/images/users/user-5.jpg" alt="image" class="h-14 w-14 rounded">
+
+                                    <img src="assets/images/users/user-5.jpg" alt="image" class="h-20 w-20 rounded">
+
+                                    <img src="assets/images/users/user-5.jpg" alt="image" class="h-24 w-24 rounded">
+                                </div>
+                            </div> <!-- end -->
+
+                        </div> <!-- flex-end -->
+                    </div>
+                </div> <!-- card-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

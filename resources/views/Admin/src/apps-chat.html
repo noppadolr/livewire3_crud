@@ -1,0 +1,506 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Chat"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Chat"})
+
+            <main class="p-6">
+
+                <div class="relative overflow-visible">
+                    <div class="grid 2xl:grid-cols-4 lg:grid-cols-3 gap-6">
+
+                        <!-- Chat List -->
+                        <div class="card">
+                            <div class="p-6">
+
+                                <div>
+                                    <div class="flex items-center justify-between mb-6">
+                                        <div class="flex items-center gap-3">
+                                            <img src="assets/images/users/user-1.jpg" class="rounded-full h-10" alt="Brandon Smith">
+                                            <div class="w-full">
+                                                <h5 class="mb-1 text-base">
+                                                    <a href="pages-profile.html">Nowak Helme</a>
+                                                </h5>
+                                                <p class="text-gray-400 text-xs">Admin Head</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="z-10">
+                                            <button data-fc-target="dropdown-target1" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                <i class="mdi mdi-dots-vertical text-xl"></i>
+                                            </button>
+
+                                            <div id="dropdown-target1" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                    Action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Another action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Something else
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Separated link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 border-y py-6 dark:border-gray-700">
+                                        <form>
+                                            <div class="relative flex rounded-md dark:border-gray-700 dark:bg-gray-700/50">
+                                                <input type="text" id="trailing-button-add-on-with-icon-and-button" name="trailing-button-add-on-with-icon-and-button" class="form-input form-input-light ps-9 dark:placeholder:text-gray-400" placeholder="People, groups & messages...">
+                                                <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3 text-gray-400">
+                                                    <i class="mdi mdi-magnify text-base"></i>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div data-simplebar class="h-[calc(100vh-600px)]">
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-2.jpg" class="rounded-full h-10" alt="Brandon Smith">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Brandon Smith</h6>
+                                                        <small class="text-gray-400">4:30am</small>
+                                                    </div>
+                                                    <div class="flex justify-between">
+                                                        <span class="font-light text-gray-400">How are you today?</span>
+                                                        <span class=""><span class="px-1 py-0.5 text-xs rounded-full bg-danger/25 text-danger">3</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2 bg-gray-50 dark:bg-gray-700/50 rounded-sm">
+                                                <img src="assets/images/users/user-3.jpg" class="rounded-full h-10" alt=" James Zavel">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100"> James Zavel</h6>
+                                                        <small class="text-gray-400">5:30am</small>
+                                                    </div>
+                                                    <span class="font-light text-gray-400">typing...</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-4.jpg" class="rounded-full h-10" alt="Maria C">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Maria C</h6>
+                                                        <small class="text-gray-400">Thu</small>
+                                                    </div>
+                                                    <div class="flex justify-between">
+                                                        <span class="font-light text-gray-400">Are we going to have this week's planning meeting today?</span>
+                                                        <span class=""><span class="px-1 py-0.5 text-xs rounded-full bg-danger/25 text-danger">2</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-5.jpg" class="rounded-full h-10" alt="Rhonda D">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Rhonda D</h6>
+                                                        <small class="text-gray-400">Wed</small>
+                                                    </div>
+                                                    <span class="font-light text-gray-400">Please check these design assets...</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-6.jpg" class="rounded-full h-10" alt="Michael H">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Michael H</h6>
+                                                        <small class="text-gray-400">Tue</small>
+                                                    </div>
+                                                    <span class="font-light text-gray-400">Are you free for 15 min? I would like to discuss something...</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-7.jpg" class="rounded-full h-10" alt="Michael H">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Thomas R</h6>
+                                                        <small class="text-gray-400">Tue</small>
+                                                    </div>
+                                                    <span class="font-light text-gray-400">Let's have meeting today between me, you and Tony...</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-8.jpg" class="rounded-full h-10" alt="Michael H">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Thomas J</h6>
+                                                        <small class="text-gray-400">Tue</small>
+                                                    </div>
+                                                    <span class="font-light text-gray-400">Howdy?</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-fc-target="default-offcanvas" data-fc-backdrop="false" data-fc-type="offcanvas">
+                                            <div class="flex items-center gap-2 py-3 px-2">
+                                                <img src="assets/images/users/user-9.jpg" class="rounded-full h-10" alt="Michael H">
+                                                <div class="w-full">
+                                                    <div class="flex justify-between">
+                                                        <h6 class="dark:text-gray-100">Ricky J</h6>
+                                                        <small class="text-gray-400">Mon</small>
+                                                    </div>
+                                                    <span class="font-light text-gray-400">Are you interested in learning?</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> <!-- end card -->
+
+                        <!-- Chat Conversation -->
+                        <div class="2xl:col-span-3 lg:col-span-2">
+                            <div class="card">
+                                <div class="p-6">
+
+                                    <div class="border-b dark:border-b-gray-700">
+                                        <div class="flex flex-wrap justify-between gap-3 mb-6">
+                                            <div class="sm:w-7/12">
+                                                <div>
+                                                    <h5 class="text-sm">
+                                                        <a href="pages-profile.html" class="mb-1 text-base">Margaret Clayton</a>
+                                                    </h5>
+                                                    <p class="mt-1.5 text-gray-400 text-xs flex items-center">
+                                                        <small class="mdi mdi-checkbox-blank-circle text-success me-1"></small> Active
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-auto">
+                                                <div class="z-10">
+                                                    <button data-fc-target="dropdown-target2" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                        <i class="mdi mdi-dots-vertical text-xl"></i>
+                                                    </button>
+
+                                                    <div id="dropdown-target2" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                            Action
+                                                        </a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                            Another action
+                                                        </a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                            Something else
+                                                        </a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                            Separated link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="h-[calc(100vh-623px)] my-6" data-simplebar>
+                                        <div class="space-y-4">
+                                            <!-- Chat Left -->
+                                            <div class="flex items-start text-start gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-1.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:00</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-light p-3 relative rounded rounded-ss-none after:top-0 after:-start-2.5 after:absolute after:border-[6px] after:border-t-light after:border-e-light after:border-transparent dark:bg-gray-700 dark:after:border-t-gray-700 dark:after:border-e-gray-700">
+                                                    <p class="text-xs font-bold relative">James Z</p>
+                                                    <p class="pt-1">Hello!</p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Right -->
+                                            <div class="flex flex-row-reverse items-start text-end gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-2.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:01</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-primary p-3 relative rounded rounded-se-none after:top-0 after:-end-2.5 after:absolute after:border-[6px] after:border-t-primary after:border-s-primary after:border-transparent">
+                                                    <p class="block text-xs font-bold text-white relative">Geneva M</p>
+                                                    <p class="pt-1 text-white/90">
+                                                        Hi, How are you? What about our next meeting?
+                                                    </p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown" data-fc-placement="bottom-end">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Left -->
+                                            <div class="flex items-start text-start gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-1.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:01</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-light p-3 relative rounded rounded-ss-none after:top-0 after:-start-2.5 after:absolute after:border-[6px] after:border-t-light after:border-e-light after:border-transparent dark:bg-gray-700 dark:after:border-t-gray-700 dark:after:border-e-gray-700">
+                                                    <p class="block text-xs font-bold relative">James Z</p>
+                                                    <p class="pt-1">
+                                                        Yeah everything is fine
+                                                    </p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Right -->
+                                            <div class="flex flex-row-reverse items-start text-end gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-2.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:02</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-primary p-3 relative rounded rounded-se-none after:top-0 after:-end-2.5 after:absolute after:border-[6px] after:border-t-primary after:border-s-primary after:border-transparent">
+                                                    <p class="block text-xs font-bold text-white relative">Geneva M</p>
+                                                    <p class="pt-1 text-white/90">
+                                                        Wow that's great
+                                                    </p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown" data-fc-placement="bottom-end">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Left -->
+                                            <div class="flex items-start text-start gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-1.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:02</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-light p-3 relative rounded rounded-ss-none after:top-0 after:-start-2.5 after:absolute after:border-[6px] after:border-t-light after:border-e-light after:border-transparent dark:bg-gray-700 dark:after:border-t-gray-700 dark:after:border-e-gray-700">
+                                                    <p class="block text-xs font-bold relative">James Z</p>
+                                                    <p class="pt-1">
+                                                        Let's have it today if you are free
+                                                    </p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Right -->
+                                            <div class="flex flex-row-reverse items-start text-end gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-2.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:03</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-primary p-3 relative rounded rounded-se-none after:top-0 after:-end-2.5 after:absolute after:border-[6px] after:border-t-primary after:border-s-primary after:border-transparent">
+                                                    <p class="block text-xs font-bold text-white relative">Geneva M</p>
+                                                    <p class="pt-1 text-white/90">
+                                                        Sure thing! let me know if 2pm works for you
+                                                    </p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown" data-fc-placement="bottom-end">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Left -->
+                                            <div class="flex items-start text-start gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-1.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:04</p>
+                                                </div>
+
+                                                <div class="max-w-3/4 bg-light p-3 relative rounded rounded-ss-none after:top-0 after:-start-2.5 after:absolute after:border-[6px] after:border-t-light after:border-e-light after:border-transparent dark:bg-gray-700 dark:after:border-t-gray-700 dark:after:border-e-gray-700">
+                                                    <p class="block text-xs font-bold relative">James Z</p>
+                                                    <p class="pt-1">
+                                                        Sorry, I have another meeting scheduled at 2pm. Can we have it at 3pm instead?
+                                                    </p>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Left -->
+                                            <div class="flex items-start text-start gap-3 group">
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Right -->
+                                            <div class="flex flex-row-reverse items-start text-end gap-3 group">
+                                                <div class="text-center">
+                                                    <img src="assets/images/users/user-2.jpg" class="rounded-md h-8" />
+                                                    <p class="text-xs pt-0.5">10:05</p>
+                                                </div>
+
+                                                <div class="max-w-3/4">
+                                                    <div class="bg-primary p-3 relative rounded rounded-se-none after:top-0 after:-end-2.5 after:absolute after:border-[6px] after:border-t-primary after:border-s-primary after:border-transparent">
+                                                        <p class="block text-xs font-bold text-white relative">Geneva M</p>
+                                                        <p class="pt-1 text-white/90">
+                                                            3pm it is. Sure, let's discuss about presentation format, it would be great to finalize today. I am attaching the last year format and assets here...
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="hidden group-hover:block">
+                                                    <button class="text-primary" type="button" data-fc-type="dropdown" data-fc-placement="bottom-end">
+                                                        <i class="mdi mdi-dots-vertical text-lg"></i>
+                                                    </button>
+                                                    <div class="fc-dropdown fc-dropdown-open:opacity-100 opacity-0 min-w-40 mt-2 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-600 rounded-md py-1.5 hidden">
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Copy Message</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Edit</a>
+                                                        <a class="flex items-center py-1.5 px-5 text-sm text-gray-500 hover:bg-slate-100 hover:text-slate-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript: void(0);">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex border-t dark:border-gray-700">
+                                        <div class="w-full">
+                                            <div class="pt-6">
+                                                <form name="chat-form">
+                                                    <div class="flex flex-wrap sm:flex-nowrap gap-2">
+                                                        <input type="text" class="form-input border dark:border-gray-700 dark:placeholder:text-gray-400 dark:bg-gray-700/50" placeholder="Enter Message..." required="" />
+                                                        <div class="w-auto">
+                                                            <div class="">
+                                                                <button type="submit" class="btn bg-primary text-white w-full">Send<i class="mdi mdi-send-variant-outline ms-3 text-lg"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- end card -->
+                        </div> <!-- end -->
+
+                    </div> <!-- end grid -->
+                </div> <!-- end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

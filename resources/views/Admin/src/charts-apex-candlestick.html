@@ -1,0 +1,94 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Candlestick Chart"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Candlestick Chart"})
+
+            <main class="p-6">
+
+                <div class="grid xl:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Simple Candlestick Chart</h4>
+                            <div dir="ltr">
+                                <div id="simple-candlestick" class="apex-charts" data-colors="#47ad77,#fa5c7c"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Combo Candlestick Chart</h4>
+                            <div dir="ltr">
+                                <div id="combo-candlestick" class="apex-charts" data-colors="#47ad77,#fa5c7c"></div>
+                                <div id="combo-bar-candlestick" class="apex-charts" data-colors="#3e60d5,#ffbc00"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Category X-Axis</h4>
+                            <div dir="ltr">
+                                <div id="x-axis-candlestick" class="apex-charts" data-colors="#47ad77,#fa5c7c,#3e60d5"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Candlestick with Line</h4>
+                            <div dir="ltr">
+                                <div id="candlestick-with-line" class="apex-charts" data-colors="#3e60d5,#47ad77,#fa5c7c"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                </div><!-- end Grid -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart Candlestick Demo js -->
+    <script src="https://apexcharts.com/samples/assets/ohlc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.17/dayjs.min.js"></script>
+
+    <script src="assets/js/pages/apex-candlestick.init.js"></script>
+
+</body>
+
+</html>

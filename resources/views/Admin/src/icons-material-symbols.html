@@ -1,0 +1,59 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Material Symbols Icons"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Material Symbols Icons"})
+
+            <main class="p-6">
+
+                <div class="card">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center">
+                            <h5 class="card-title">
+                                All Icons 
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="px-6">
+                        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 icons-list-demo" id="icons"> </div>
+                    </div>
+                </div> <!-- end card -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+    
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Material Symbols Icons Demo js -->
+    <script src="assets/js/pages/icons-material-symbols.init.js"></script>
+
+</body>
+
+</html>

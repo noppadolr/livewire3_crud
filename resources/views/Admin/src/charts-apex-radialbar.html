@@ -1,0 +1,117 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "RadialBar Charts"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"RadialBar Charts"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Basic RadialBar Chart</h4>
+                            <div dir="ltr">
+                                <div id="basic-radialbar" class="apex-charts" data-colors="#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Multiple RadialBars</h4>
+                            <div dir="ltr">
+                                <div id="multiple-radialbar" class="apex-charts" data-colors="#6c757d,#ffbc00,#3e60d5,#47ad77"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Circle Chart - Custom Angle</h4>
+                            <div class="text-center" dir="ltr">
+                                <div id="circle-angle-radial" class="apex-charts" data-colors="#47ad77,#3e60d5,#fa5c7c,#ffbc00"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Circle Chart with Image</h4>
+                            <div dir="ltr">
+                                <div id="image-radial" class="apex-charts"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Stroked Circular Guage</h4>
+                            <div dir="ltr">
+                                <div id="stroked-guage-radial" class="apex-charts" data-colors="#3e60d5"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Gradient Circular Chart</h4>
+                            <div dir="ltr">
+                                <div id="gradient-chart" class="apex-charts" data-colors="#8f75da,#3e60d5"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Semi Circle Gauge</h4>
+                            <div dir="ltr">
+                                <div id="semi-circle-gauge" class="apex-charts" data-colors="#3e60d5"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart RadialBar Demo js -->
+    <script src="assets/js/pages/apex-radialbar.init.js"></script>
+
+</body>
+
+</html>

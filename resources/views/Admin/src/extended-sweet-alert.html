@@ -1,0 +1,132 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Sweet Alerts"})
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Sweet Alerts"})
+
+            <main class="p-6">
+
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="card-title mb-6">Examples</h3>
+
+                        <div class="overflow-auto">
+                            <div class="min-w-full inline-block align-middle">
+                                <div class="overflow-hidden">
+                                    <table class="min-w-full">
+                                        <thead class="bg-gray-100 dark:bg-gray-700/50">
+                                            <tr>
+                                                <th scope="col" class="px-3 py-3 text-start text-sm font-medium text-gray-700 dark:text-white">Alert Type</th>
+                                                <th scope="col" class="px-3 py-3 text-start text-sm font-medium text-gray-700 dark:text-white">Example</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A basic message</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-basic">Click me</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A title with a text under</td>
+                                                <td>
+                                                    <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-title">Click me</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A success message!</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-success">Click me</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A modal with a title, an error icon, a text, a button and a footer</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-warning">Click me</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A modal with a title, an error icon, a text, a button and a footer</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-info">Click me</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A modal with a title, an error icon, a text, and a footer</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-error">Click me</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A modal window with a long content inside:</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-longcontent">Click me</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">A confirm dialog, with a function attached to the "Confirm"-button...</td>
+                                                <td>
+                                                   <a href="#" class="btn bg-info text-white btn-sm px-3 py-3 whitespace-nowrap" id="sweetalert-params">Click me</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/extended-sweetalert.init.js"></script>
+
+</body>
+
+</html>

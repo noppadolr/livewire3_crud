@@ -1,0 +1,103 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Timeline Charts"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Timeline Charts"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Basic Timeline</h4>
+                            <div dir="ltr">
+                                <div id="basic-timeline" class="apex-charts" data-colors="#fa6767"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Distributed Timeline </h4>
+                            <div dir="ltr">
+                                <div id="distributed-timeline" class="apex-charts" data-colors="#3e60d5,#47ad77,#fa5c7c,#6c757d,#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Multi Series Timeline</h4>
+
+                            <div dir="ltr">
+                                <div id="multi-series-timeline" class="apex-charts" data-colors="#6c757d,#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Advanced Timeline</h4>
+                            <div dir="ltr">
+                                <div id="advanced-timeline" class="apex-charts" data-colors="#3e60d5,#47ad77,#fa5c7c"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Multiple Series - Group Rows</h4>
+                            <div dir="ltr">
+                                <div id="group-rows-timeline" class="apex-charts" data-colors="#3e60d5,#47ad77,#fa5c7c,#6c757d,#39afd1,#ffc35a, #eef2f7, #313a46,#3577f1, #0ab39c, #f0a548,#68eaff"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Moment js -->
+    <!-- <script src="assets/libs/moment/min/moment.min.js"></script> -->
+
+    <!-- Apex Chart Timeline Demo js -->
+    <script src="assets/js/pages/apex-timeline.init.js"></script>
+
+</body>
+
+</html>

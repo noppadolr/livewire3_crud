@@ -1,0 +1,14 @@
+//
+// _card.scss
+//
+
+@layer components {
+
+    .card {
+        @apply bg-white dark:bg-gray-800 shadow-sm rounded h-fit;
+    }    
+
+    .card-title {
+        @apply text-base font-semibold text-slate-800 dark:text-slate-200;
+    }
+}

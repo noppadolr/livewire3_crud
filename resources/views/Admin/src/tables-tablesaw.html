@@ -1,0 +1,841 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Tablesaw Tables"})
+
+    <!-- Tablesaw css -->
+    <link href="assets/libs/tablesaw/tablesaw.css" rel="stylesheet" type="text/css" />
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Tablesaw Tables"})
+
+            <main class="p-6">
+
+                <div class="flex flex-col gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Stack Table</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="stack">
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Sortable Table</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-sortable data-tablesaw-sortable-switch>
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Swipe Table</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="swipe">
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-s text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Swipe Table with Mini Map</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="swipe" data-tablesaw-minimap>
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Column Toggle Table</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="columntoggle">
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Column Toggle Table with Mini Map</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Mode Switch Table</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="swipe" data-tablesaw-mode-switch data-tablesaw-minimap>
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-s text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Bare Table</h4>
+
+                            <div class="overflow-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full" data-tablesaw-mode="swipe" data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>
+                                            <thead class="bg-gray-100 dark:bg-gray-700/50 border-b-2 border-gray-200 dark:border-gray-700">
+                                                <tr>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Movie Title</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rank</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Year</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Rating</th>
+                                                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" class="px-2 py-2.5 text-start text-sm font-medium text-gray-500 dark:text-white">Gross</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Avatar</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-s text-gray-500 dark:text-gray-200">1</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2009</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">83%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.7B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Titanic</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">1997</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">88%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$2.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Avengers</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.5B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Harry Potter and the Deathly Hallows—Part 2</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">4</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">96%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.3B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Frozen</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">5</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">89%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Iron Man 3</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">6</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2013</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">78%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.2B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Dark of the Moon</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">7</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2011</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">36%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">The Lord of the Rings: The Return of the King</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">8</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2003</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">95%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Skyfall</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">9</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2012</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">92%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.1B</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">Transformers: Age of Extinction</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">10</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">2014</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">18%</td>
+                                                    <td class="px-2 py-2.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-200">$1.0B</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end card-->
+
+                </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+    
+    <!-- Tablesav Plugin -->
+    <script src="assets/libs/tablesaw/tablesaw.js"></script>
+
+    <!-- Init js -->
+    <script src="assets/js/pages/tablesaw.init.js"></script>
+
+</body>
+
+</html>

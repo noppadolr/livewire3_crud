@@ -1,0 +1,575 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Cards"})
+
+            <main class="p-6">
+
+                <div class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+
+                    <div class="card">
+                        <img class="w-full h-auto rounded-t" src="assets/images/gallery/1.jpg" alt="Card image cap">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400 mb-4">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <a href="#" class="btn bg-primary text-white">Button</a>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <img class="w-full h-auto rounded-t" src="assets/images/gallery/2.jpg" alt="Card image cap">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="py-3 px-5 transition-all duration-300 hover:bg-slate-50 dark:hover:bg-gray-700/30 border-b-2 border-slate-50 dark:border-gray-700/30">Cras justo odio</li>
+                            <li class="py-3 px-5 transition-all duration-300 hover:bg-slate-50 dark:hover:bg-gray-700/30">Dapibus ac facilisis in</li>
+                        </ul>
+                        <div class="p-6">
+                            <a href="#" class="text-primary font-medium">Card link</a>
+                            <a href="#" class="text-primary font-medium ms-6">Another link</a>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <img class="w-full h-auto rounded-t" src="assets/images/gallery/3.jpg" alt="Card image cap">
+                        <div class="p-6">
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-2">Card title</h4>
+                            <h6 class="text-xs text-gray-400">Support card subtitle</h6>
+                        </div>
+                        <img src="assets/images/gallery/4.jpg" alt="Card image cap">
+                        <div class="p-6">
+                            <p class="text-gray-500 dark:text-gray-400 mb-4">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                            <a href="#" class="text-primary font-medium">Card link</a>
+                            <a href="#" class="text-primary font-medium ms-6">Another link</a>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="xl:col-span-2 col-span-1">
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-4">Special title treatment</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn bg-primary text-white w-full">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div> <!-- end -->
+
+                    <div class="xl:col-span-2 col-span-1">
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-4">Special title treatment</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn bg-primary text-white w-full">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div> <!-- end -->
+
+                    <div class="xl:col-span-4 md:col-span-2 col-span-1">
+                        <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+
+                            <div class="card">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Special title treatment</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+                                    <a href="#" class="btn bg-primary text-white w-full">Go somewhere</a>
+                                </div>
+                            </div>
+
+                            <div class="card text-center">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Special title treatment</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+                                    <a href="#" class="btn bg-primary text-white w-full">Go somewhere</a>
+                                </div>
+                            </div>
+
+                            <div class="card text-end">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Special title treatment</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+                                    <a href="#" class="btn bg-primary text-white w-full">Go somewhere</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <h5 class="bg-gray-100 dark:bg-transparent dark:text-gray-400 font-medium px-6 py-4">Featured</h5>
+                                <div class="p-6">
+                                    <h5 class="card-title mb-4">Special title treatment</h5>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                    <a href="#" class="btn bg-primary text-white">Go somewhere</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="bg-gray-100 dark:bg-transparent text-gray-500 dark:text-gray-400 font-medium px-6 py-4">Quote</div>
+                                <div class="p-6">
+                                    <blockquote class="mb-4">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs font-medium text-gray-400">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-center">
+                                <div class="bg-gray-100 dark:bg-transparent text-gray-500 dark:text-gray-400 font-medium px-6 py-4">Featured</div>
+                                <div class="p-6">
+                                    <h5 class="card-title mb-4">Special title treatment</h5>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">With supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                    <a href="#" class="btn bg-primary text-white">Go somewhere</a>
+                                </div>
+                                <div class="bg-gray-100 dark:bg-transparent text-gray-400 font-medium px-6 py-4">
+                                    2 days ago
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img class="w-full h-auto rounded-t" src="assets/images/gallery/5.jpg" alt="Card image cap">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Card title</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit
+                                        longer.</p>
+                                    <p class="text-gray-400">
+                                        <small class="text-xs">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Card title</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit
+                                        longer.</p>
+                                    <p class="text-gray-400">
+                                        <small class="text-xs">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                                <img class="w-full h-auto rounded-b" src="assets/images/gallery/7.jpg" alt="Card image cap">
+                            </div>
+
+                            <div class="card text-white relative flex flex-col rounded">
+                                <img class="w-full h-auto rounded-b" src="assets/images/gallery/6.jpg" alt="Card image">
+                                <div class="absolute rounded inset-0 p-5">
+                                    <h4 class="card-title text-white mb-4">Card title</h4>
+                                    <p class="mb-4">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit
+                                        longer.</p>
+                                    <p>
+                                        <small>Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card bg-dark text-white dark:bg-dark">
+                                <div class="p-6">
+                                    <h4 class="card-title text-white mb-4">Special title treatment</h4>
+                                    <p class="mb-4">With supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                    <a href="#" class="btn bg-primary text-white">Button</a>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-primary dark:bg-primary">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-success dark:bg-success">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-info dark:bg-info">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-warning dark:bg-warning">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-danger dark:bg-danger">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-purple dark:bg-purple">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-pink dark:bg-pink">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card bg-white dark:text-white">
+                                <div class="p-6">
+                                    <blockquote>
+                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.</p>
+                                        <footer class="text-xs text-black/50 dark:text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card border border-primary text-primary">
+                                <div class="p-6">
+                                    <h5 class="text-sm text-primary mb-4">Primary card title</h5>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+
+                            <div class="card border border-secondary text-secondary">
+                                <div class="p-6">
+                                    <h5 class="text-sm text-secondary mb-4">Secondary card title</h5>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+
+                            <div class="card border border-success text-success">
+                                <div class="p-6">
+                                    <h5 class="text-sm text-Success mb-4">success card title</h5>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end -->
+
+                    <div class="xl:col-span-4 md:col-span-2 col-span-1 mt-3">
+                        <div class="col-span-4">
+                            <h4 class="card-title mb-4">Card Group</h4>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 grid-cols-1 rounded overflow-hidden">
+                            <div class="card rounded-none">
+                                <img class="w-full h-auto" src="assets/images/gallery/8.jpg" alt="Card image cap">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Card title</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit
+                                        longer.</p>
+                                    <p class="mb-4">
+                                        <small class="text-xs text-gray-400">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card rounded-none">
+                                <img class="w-full h-auto" src="assets/images/gallery/9.jpg" alt="Card image cap">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Card title</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit
+                                        longer.</p>
+                                    <p class="mb-4">
+                                        <small class="text-xs text-gray-400">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card rounded-none">
+                                <img class="w-full h-auto" src="assets/images/gallery/10.jpg" alt="Card image cap">
+                                <div class="p-6">
+                                    <h4 class="card-title mb-4">Card title</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit
+                                        longer.</p>
+                                    <p class="mb-4">
+                                        <small class="text-xs text-gray-400">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end -->
+
+                    <div class="xl:col-span-4 md:col-span-2 col-span-1 mt-3">
+                        <div class="col-span-4">
+                            <h4 class="card-title mb-4">Card Group</h4>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                            <div class="card">
+                                <div class="bg-white border-b rounded-t-lg pt-3 px-4 md:pt-4 md:px-5 dark:bg-slate-800 dark:border-gray-700">
+                                    <nav class="flex space-x-2" aria-label="Tabs">
+                                        <a class="-mb-px py-2.5 px-4 bg-white text-sm font-medium text-center border border-b-transparent text-gray-500 rounded-t-lg hover:text-gray-700 focus:z-10 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-800 dark:hover:text-gray-400" href="#">
+                                            Active
+                                        </a>
+
+                                        <a class="-mb-px py-2.5 px-4 text-sm font-medium text-center border-b text-gray-500 rounded-t-lg hover:text-gray-700 focus:z-10 dark:border-gray-700 dark:hover:text-gray-400" href="#">
+                                            Link
+                                        </a>
+
+                                        <a class="-mb-px py-2.5 px-4 text-sm font-medium text-center border-b text-gray-500 rounded-t-lg hover:text-gray-700 focus:z-10 dark:border-gray-700 dark:hover:text-gray-400" href="#">
+                                            Link
+                                        </a>
+                                    </nav>
+                                </div>
+                                <div class="p-4 text-center md:py-7 md:px-5">
+                                    <h3 class="text-lg font-bold dark:text-white">
+                                        Card title
+                                    </h3>
+                                    <p class="mt-2 dark:text-gray-400">
+                                        With supporting text below as a natural lead-in to additional content.
+                                    </p>
+                                    <a class="btn bg-primary text-white mt-2" href="#">
+                                        Go somewhere
+                                    </a>
+                                </div>
+                            </div> <!-- card-end -->
+
+                            <div class="card">
+                                <!-- Select (Mobile only) -->
+                                <div class="sm:hidden">
+                                    <label for="card-nav-tabs" class="sr-only">Select a nav</label>
+                                    <select name="card-nav-tabs" id="card-nav-tabs" class="block w-full border-t-0 border-x-0 border-gray-300 rounded-t-xl focus:ring-primary focus:border-primary">
+                                        <option selected>My Account</option>
+                                        <option>Company</option>
+                                        <option>Team Members</option>
+                                        <option>Billing</option>
+                                    </select>
+                                </div>
+                                <!-- End Select (Mobile only) -->
+
+                                <!-- Nav Tabs (Device only) -->
+                                <div class="hidden sm:block">
+                                    <nav class="relative z-0 flex border-b rounded-xl divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700" aria-label="Tabs">
+                                        <a class="group relative min-w-0 flex-1 bg-white py-4 px-4 border-b-2 border-b-primary text-gray-900 rounded-tl-xl text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:text-gray-300" aria-current="page" href="#">
+                                            My Account
+                                        </a>
+
+                                        <a class="group relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:hover:text-gray-400" href="#">
+                                            Company
+                                        </a>
+
+                                        <a class="group relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:hover:text-gray-400" href="#">
+                                            Team Members
+                                        </a>
+
+                                        <a class="group relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 rounded-tr-xl text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:hover:text-gray-400" href="#">
+                                            Billing
+                                        </a>
+                                    </nav>
+                                </div>
+                                <!-- End Nav Tabs (Device only) -->
+
+                                <div class="p-4 text-center md:py-7 md:px-5">
+                                    <h3 class="text-lg font-bold dark:text-white">
+                                        Card title
+                                    </h3>
+                                    <p class="mt-2 dark:text-gray-400">
+                                        With supporting text below as a natural lead-in to additional content.
+                                    </p>
+                                    <a class="btn bg-primary text-white mt-2" href="#">
+                                        Go somewhere
+                                    </a>
+                                </div>
+                            </div> <!-- card-end -->
+                        </div> <!-- grid-end -->
+                    </div> <!-- end -->
+
+                    <div class="xl:col-span-4 md:col-span-2 col-span-1 mt-3">
+                        <div class="col-span-4">
+                            <h4 class="card-title mb-4">Columns</h4>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+
+                            <div class="flex flex-col gap-6">
+                                <div class="card">
+                                    <img class="w-full h-auto rounded-t" src="assets/images/gallery/2.jpg" alt="Card image cap">
+                                    <div class="p-6">
+                                        <h4 class="card-title mb-4">Card title that wraps to a new line</h4>
+                                        <p class="text-gray-500 dark:text-gray-400">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="p-6">
+                                        <blockquote>
+                                            <p class="text-gray-500 dark:text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                                erat a ante.</p>
+                                            <footer class="text-xs font-medium text-gray-400">
+                                                Someone famous in <cite title="Source Title">Source Title</cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-6">
+                                <div class="card">
+                                    <img class="w-full h-auto rounded-t" src="assets/images/gallery/3.jpg" alt="Card image cap">
+                                    <div class="p-6">
+                                        <h4 class="card-title mb-4">Card title</h4>
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">This card has supporting text below as a natural
+                                            lead-in to additional content.</p>
+                                        <p>
+                                            <small class="text-xs font-medium text-gray-400">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card text-center">
+                                    <div class="p-6">
+                                        <blockquote>
+                                            <p class="text-gray-500 dark:text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                                erat a ante.</p>
+                                            <footer class="text-xs font-medium text-gray-400">
+                                                Someone famous in <cite title="Source Title">Source Title</cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="p-6">
+                                        <h4 class="card-title mb-4">Card title</h4>
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">This card has supporting text below as a natural
+                                            lead-in to additional content.</p>
+                                        <p>
+                                            <small class="text-xs font-medium text-gray-400">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-6">
+                                <div class="card">
+                                    <img class="w-full h-auto rounded" src="assets/images/gallery/4.jpg" alt="Card image cap">
+                                </div>
+
+                                <div class="card text-end">
+                                    <div class="p-6">
+                                        <blockquote>
+                                            <p class="text-gray-500 dark:text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                                erat a ante.</p>
+                                            <footer class="text-xs font-medium text-gray-400">
+                                                Someone famous in <cite title="Source Title">Source Title</cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="p-6">
+                                        <h4 class="card-title mb-4">Card title</h4>
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                        <p>
+                                            <small class="text-xs font-medium text-gray-400">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

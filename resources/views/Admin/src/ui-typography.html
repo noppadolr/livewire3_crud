@@ -1,0 +1,130 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Typography"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Typography"})
+
+            <main class="p-6">
+
+                <div class="flex flex-wrap flex-col gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Display headings</h4>
+
+                            <div class="space-y-4">
+                                <h1 class="text-9xl">text-9xl<span class="text-base">(128px)</span></h1>
+                                <h1 class="text-8xl">text-8xl <span class="text-base">(96px)</span></h1>
+                                <h1 class="text-7xl">text-7xl <span class="text-base"> (72px)</span></h1>
+                                <h1 class="text-6xl">text-6xl <span class="text-base">(60px)</span></h1>
+                                <h1 class="text-5xl">text-5xl <span class="text-base">(48px)</span></h1>
+                                <h1 class="text-4xl">text-4xl <span class="text-base">(36px)</span></h1>
+                                <h1 class="text-3xl">text-3xl <span class="text-base">(30px)</span></h1>
+                                <h1 class="text-2xl">text-2xl <span class="text-base">(24px)</span></h1>
+                                <h1 class="text-xl">text-xl <span class="text-base">(20px)</span></h1>
+                                <h1 class="text-lg">text-lg <span class="text-base">(18px)</span></h1>
+                                <h1 class="text-base">text-base (16px)</h1>
+                                <h1 class="text-sm">text-sm <span class="text-base">(14px)</span></h1>
+                                <h1 class="text-xs">text-xs <span class="text-base">(12px)</span></h1>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap lg:flex-nowrap gap-6">
+                                <div class="lg:w-1/2 w-full">
+                                    <h4 class="card-title mb-4">Inline text elements</h4>
+    
+                                    <div class="space-y-3">
+                                        <p class="underline">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="overline">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="line-through">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="no-underline">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="underline decoration-primary">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="overline decoration-success decoration-2">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="line-through decoration-danger decoration-2">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="underline decoration-solid">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="underline decoration-double">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="underline decoration-dotted">The quick brown fox jumps over the lazy dog.</p>
+                                        <p class="underline decoration-wavy">The quick brown fox jumps over the lazy dog.</p>
+                                    </div>
+                                </div> <!-- end -->
+    
+                                <div class="lg:w-1/2 w-full">
+                                    <h4 class="card-title mb-4">Contextual Text Colors</h4>
+
+                                    <div class="space-y-3">
+                                        <p class="text-custom">
+                                            Etiam porta sem malesuada magna mollis euismod.
+                                        </p>
+                                        <p class="text-pink">
+                                            Donec ullamcorper nulla non metus auctor fringilla.
+                                        </p>
+                                        <p class="text-muted">
+                                            Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                                        </p>
+                                        <p class="text-primary">
+                                            Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                        </p>
+                                        <p class="text-success">
+                                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                                        </p>
+                                        <p class="text-info">
+                                            Maecenas sed diam eget risus varius blandit sit amet non magna.
+                                        </p>
+                                        <p class="text-warning">
+                                            Etiam porta sem malesuada magna mollis euismod.
+                                        </p>
+                                        <p class="text-danger">
+                                            Donec ullamcorper nulla non metus auctor fringilla.
+                                        </p>
+                                        <p class="text-dark">
+                                            Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                        </p>
+                                        <p class="text-purple">
+                                            Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                                        </p>
+                                    </div>
+                                </div> <!-- end -->
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- flex-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

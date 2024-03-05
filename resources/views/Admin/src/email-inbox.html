@@ -1,0 +1,721 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Project List"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Inbox"})
+            <main class="flex-grow p-6 pb-0">
+
+                <div class="grid lg:grid-cols-7 gap-6 w-full">
+                    <!-- Email Sidebar Menu -->
+                    <div>
+                        <div>
+                            <div class="h-full rounded-none lg:rounded-md">
+                                <div data-simplebar class="h-full pt-5">
+                                    <a href="javascript:void(0)" data-fc-target="default-modal" data-fc-type="modal" type="button" type="button" class="btn bg-danger hover:bg-danger/80 rounded-full inline-flex justify-center text-white px-10 mx-auto">Compose </a>
+
+                                    <div class="mt-6 mb-5">
+                                        <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center font-bold text-danger">Inbox (43)</a>
+                                        <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Important</a>
+                                        <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Sent</a>
+                                        <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Drafts</a>
+                                        <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Trash</a>
+                                    </div>
+                                    <hr class="dark:border-gray-700">
+
+                                    <div class="menu-segment my-6">
+                                        <div>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center font-bold uppercase text-dark dark:text-white">Labels<span class="ms-auto"><i class="mdi mdi-plus me-2"></i></span></a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Dribbble<span class="ms-auto"><i class="mdi mdi-checkbox-blank-circle text-sm text-pink me-2"></i></span></a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Roommates<span class="ms-auto"><i class="mdi mdi-checkbox-blank-circle text-sm text-success me-2"></i></span></a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">Bills<span class="ms-auto"><i class="mdi mdi-checkbox-blank-circle text-sm text-info me-2"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <hr class="dark:border-gray-700">
+
+                                    <div class="mt-9">
+                                        <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-center font-bold uppercase text-dark dark:text-white">Chat <span class="ms-auto"><i class="mdi mdi-plus me-2"></i></span></a>
+                                        <div class="mt-4">
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm font flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">
+                                                <i class="mdi mdi-checkbox-blank-circle text-sm text-success me-2"></i>
+                                                <span>Laura Turner</span>
+                                            </a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm font flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">
+                                                <i class="mdi mdi-checkbox-blank-circle text-sm text-success me-2"></i>
+                                                <span>Kevin Jones</span>
+                                            </a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm font flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">
+                                                <i class="mdi mdi-checkbox-blank-circle text-sm text-primary me-2"></i>
+                                                <span>John King</span>
+                                            </a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm font flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">
+                                                <i class="mdi mdi-checkbox-blank-circle text-sm text-primary me-2"></i>
+                                                <span>Jenny Parker</span>
+                                            </a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm font flex items-center hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">
+                                                <i class="mdi mdi-checkbox-blank-circle text-sm text-primary me-2"></i>
+                                                <span>Paul Green</span>
+                                            </a>
+                                            <a href="javascript: void(0);" class="py-2 px-1.5 text-sm flex items-ce hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700/50">
+                                                <i>See offline list</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email List -->
+                    <div class="lg:col-span-6">
+                        <div class="card min-w-auto">
+
+                            <div class="flex flex-wrap items-center justify-between gap-4 p-6 border-b dark:border-gray-700">
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="rounded-full border-2 w-8 h-8 flex items-center justify-center cursor-pointer border-secondary/70 hover:border-se "><i class="mdi mdi-refresh text-secondary"></i></div>
+                                    </div>
+                                    <div>
+                                        <div class="rounded-full border-2 w-8 h-8 flex items-center justify-center cursor-pointer border-secondary/70 hover:border-se "><i class="mdi mdi-share text-secondary"></i></div>
+                                    </div>
+                                    <div>
+                                        <div class="rounded-full border-2 w-8 h-8 flex items-center justify-center cursor-pointer border-danger"><i class="mdi mdi-close text-danger"></i></div>
+                                    </div>
+                                    <div>
+                                        <div class="rounded-full border-2 w-8 h-8 flex items-center justify-center cursor-pointer border-danger"><i class="mdi mdi-flag text-danger"></i></div>
+                                    </div>
+                                </div>
+                                
+                                <form>
+                                    <div class="relative flex rounded-md border dark:border-gray-700 dark:bg-gray-700/50">
+                                        <input type="text" id="trailing-button-add-on-with-icon-and-button" name="trailing-button-add-on-with-icon-and-button" class="form-input form-input-light ps-9 dark:placeholder:text-gray-400" placeholder="Search...">
+                                        <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3 text-gray-400">
+                                            <i class="mdi mdi-magnify text-base"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div data-simplebar class="h-[calc(100vh-180px)]">
+                                <div class="p-6">
+
+                                    <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Lucas Kriebel (via Twitter)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">Lucas Kriebel (@LucasKriebel) has sent you a direct message on Twitter!&nbsp;–&nbsp; @LucasKriebel - Very cool :) Nicklas, You have a new direct message.</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">11:49 am</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Andrew Zimmer</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">OMochila Beta: Subscription Confirmed
+                                                            &nbsp;–&nbsp; <span>You've been confirmed! Welcome to the ruling class of the inbox. For your records, here is a copy of the information you submitted to us...</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Mar 8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-800 dark:text-gray-100">Infinity HR</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-800 dark:text-gray-100">
+                                                            Sveriges Hetaste sommarjobb &nbsp;&ndash;&nbsp;
+                                                            <span>Hej Nicklas Sandell! Vi vill bjuda in dig till "First tour 2014", ett rekryteringsevent som erbjuder jobb på 16 semesterorter iSverige.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Mar 8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Web Support Dennis</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Re: New mail settings &nbsp;&ndash;&nbsp;
+                                                            <span>Will you answer him asap?</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Mar 7</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">me, Peter (2)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Off on Thursday &nbsp;&ndash;&nbsp;
+                                                            <span>Eff that place, you might as well stay here with us instead! Sent from my iPhone 4 &gt; 4 mar 2014 at 5:55 pm</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Mar 7</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Medium</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            This Week's Top Stories &nbsp;&ndash;&nbsp;
+                                                            <span>Our top pick for you on Medium this week The Man Who Destroyed America’s Ego</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Mar 7</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Death to Stock</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Montly High-Res Photos &nbsp;&ndash;&nbsp;
+                                                            <span>To create this month's pack, we hosted a party with local musician Jared Mahone here in Columbus, Ohio.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Reviber</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Weekend on Revibe &nbsp;&ndash;&nbsp;
+                                                            <span>Today's Friday and we thought maybe you want some music inspiration for the weekend. Here are some trending tracks and playlists we think you should give a listen!</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 27</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Erik, me (5)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Regarding our meeting &nbsp;&ndash;&nbsp;
+                                                            <span>That's great, see you on Thursday!</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 24</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">KanbanFlow</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Task assigned: Clone ARP's website
+                                                            &nbsp;&ndash;&nbsp; <span>You have been assigned a task by Alex@Work on the board Web.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 24</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Tobias Berg</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Let's go fishing! &nbsp;&ndash;&nbsp;
+                                                            <span>Hey, You wanna join me and Fred at the lake tomorrow? It'll be awesome.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 23</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Charukaw, me (7)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Hey man &nbsp;&ndash;&nbsp;
+                                                            <span>Nah man sorry i don't. Should i get it?</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 23</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-800 dark:text-gray-100">me, Peter (5)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-800 dark:text-gray-100">
+                                                            Home again! &nbsp;&ndash;&nbsp;
+                                                            <span>That's just perfect! See you tomorrow.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-800 dark:text-gray-100 w-20 text-end">Feb 21</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Stack Exchange</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            1 new items in your Stackexchange inbox&nbsp;&ndash;&nbsp;
+                                                            <span>The following items were added to your Stack Exchange global inbox since you last checked it.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 21</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Google Drive Team</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            You can now use your storage in Google
+                                                            Drive &nbsp;&ndash;&nbsp; <span>Hey Nicklas Sandell! Thank you for purchasing extra storage space in Google Drive.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Feb 20</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-800 dark:text-gray-100">me, Susanna (11)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-800 dark:text-gray-100">
+                                                            Train/Bus &nbsp;&ndash;&nbsp;
+                                                            <span>Yes ok, great! I'm not stuck in Stockholm anymore, we're making progress.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-800 dark:text-gray-100 w-20 text-end">Feb 19</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Peter, me (3)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Hello &nbsp;&ndash;&nbsp;
+                                                            <span>Trip home from Colombo has been arranged, then Jenna will come get me from Stockholm. :)</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Jan 28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">me, Susanna (7)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Since you asked... and i'm inconceivably bored at the train station &nbsp;&ndash;&nbsp;
+                                                            <span>Alright thanks. I'll have to re-book that somehow, i'll get back to you.</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Jan 25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                       <div class="group relative px-4 py-3 transition-all duration-500 hover:bg-gray-50 overflow-hidden dark:hover:bg-gray-700/50">
+                                        <div class="flex items-center h-full">
+                                            <!-- Read Checkbox -->
+                                            <input type="checkbox" class="form-checkbox rounded">
+
+                                            <!-- Star -->
+                                            <i class="mdi mdi-star-outline mx-5 text-lg"></i>
+
+                                            <!-- Email Subject -->
+                                            <div class="grid grid-cols-10 font-medium whitespace-nowrap flex-grow">
+                                                <div class="2xl:col-span-2 xl:col-span-4 sm:col-span-5 col-span-10">
+                                                    <a href="#" class="text-gray-500 dark:text-gray-400">Randy, me (5)</a>
+                                                </div>
+
+                                                <div class="2xl:col-span-8 xl:col-span-6 sm:col-span-5 hidden sm:block">
+                                                    <div class="truncate overflow-hidden">
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400">
+                                                            Last pic over my village &nbsp;&ndash;&nbsp;
+                                                            <span>Yeah i'd like that! Do you remember the video you showed me of your train ride between Colombo and Kandy? The one with the mountain view? I would love to see that one again!</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email Time -->
+                                            <div class="whitespace-nowrap hidden sm:block">
+                                                <div class="text-gray-500 dark:text-gray-400 w-20 text-end">Jan 22</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center mt-6">
+                                        <a href="#" class="text-primary">Show more messages</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- card End -->
+            </main>
+        </div>
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

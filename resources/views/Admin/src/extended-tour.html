@@ -1,0 +1,124 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Tour"})
+
+    <!-- Shepherd (Tour) css -->
+    <link rel="stylesheet" href="assets/libs/shepherd.js/css/shepherd.css">
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Tour"})
+
+            <main class="p-6">
+
+                <div class="card">
+                    <div class="p-6">
+                        <div>
+
+                            <div class="text-center mb-16">
+                                <div class="inline-flex justify-center py-3 px-2" id="logo-tour">
+                                    <img src="assets/images/logo-dark.png" class="h-5 block dark:hidden" alt="logo">
+                                    <img src="assets/images/logo-light.png" class="h-5 hidden dark:block" alt="logo">
+                                </div>
+                            </div> <!-- end -->
+
+                            <div class="grid lg:grid-cols-2 gap-6">
+                                <div class="2xl:pe-14">
+                                    <h4 class="header-title inline-flex text-lg mb-8" id="tour-card-one">Heading</h4>
+
+                                    <div class="flex flex-col gap-4">
+                                        <div>
+                                            <h1 class="sm:text-4xl text-3xl mb-2">This is a Heading 1</h1>
+                                            <p class="text-gray-500">Suspendisse vel quam malesuada, aliquet sem sit
+                                                amet, fringilla elit. Morbi tempor tincidunt tempor. vulputate sapienest consequat posuere et at velit.</p>
+                                        </div>
+
+                                        <div>
+                                            <h2 class="sm:text-3xl text-2xl mb-2">This is a Heading 2</h2>
+                                            <p class="text-gray-500">In nec rhoncus eros. Vestibulum eu mattis nisl.
+                                                Quisque viverra viverra magna nec pulvinar porta augue, consectetur facilisis diam a malesuada purus.</p>
+                                        </div>
+
+                                        <div>
+                                            <h3 class="sm:text-2xl text-xl mb-2">This is a Heading 3</h3>
+                                            <p class="text-gray-500">Vestibulum auctor tincidunt semper. Phasellus ut
+                                                vulputate lacus. Suspendisse
+                                                ultricies mi eros, sit amet tempor nulla varius sed dapibus in tellus.</p>
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-lg mb-2">This is a Heading 4</h4>
+                                            <p class="text-gray-500">Nulla et mattis nunc. Curabitur scelerisque
+                                                commodo condimentum. Mauris blandit, velit a consectetur egestas ultrices arcu eros vel erat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="2xl:ps-14">
+                                    <h4 class="header-title inline-flex text-lg mb-8" id="tour-card-two">Blockqoutes</h4>
+
+                                    <blockquote id="blockquote-title-tour">
+                                        <p class="text-gray-500 text-base mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="text-gray-400 text-xs mb-5">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                    </blockquote>
+
+                                    <blockquote class="text-center">
+                                        <p class="text-gray-500 text-base mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="text-gray-400 text-xs mb-5">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                    </blockquote>
+
+                                    <blockquote class="text-end">
+                                        <p class="text-gray-500 text-base mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="text-gray-400 text-xs mb-5">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div> <!-- grid end -->
+
+                            <div class="text-center mt-16">
+                                <button class="btn bg-danger text-white" id="thankyou-tour">Thank you !</button>
+                            </div> <!-- end -->
+
+                        </div>
+                    </div>
+                </div> <!-- card end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Tour js -->
+    <script src="assets/libs/shepherd.js/js/shepherd.min.js"></script>
+
+    <!-- Tour init js-->
+    <script src="assets/js/pages/extended-tour.init.js"></script>
+
+</body>
+
+</html>

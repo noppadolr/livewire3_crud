@@ -1,0 +1,68 @@
+//
+// _topbar.scss
+//
+
+.app-header {
+    @apply sticky top-0;
+    z-index: 35;
+    background: $topbar-bg;
+    height: $topbar-height;
+
+    .nav-link {
+        color: $topbar-item-color;
+        height: $topbar-height;
+        @apply rounded-full transition-all ease-in-out;
+
+        &:hover {
+            color: $topbar-item-hover-color;
+        }
+
+        &:is(.open, .show, .active, :active, :focus) {
+            color: $topbar-item-active-color;
+        }
+    }
+
+    .logo-box {
+        @apply xl:hidden;
+
+        .logo-lg {
+            @apply md:block hidden;
+        }
+
+        .logo-sm {
+            @apply md:hidden block;
+        }
+    }
+
+    .form-input,
+    .form-input::placeholder,
+    .mdi-magnify,
+    .page-title {
+        @apply text-slate-900;
+    }
+}
+
+
+
+// Topbar Logo
+html[data-mode="dark"],
+html[data-topbar-color="dark"] {
+    .app-header {
+        .logo-box {
+            .logo-light {
+                display: block;
+            }
+
+            .logo-dark {
+                display: none;
+            }
+        }
+
+        .form-input,
+        .form-input::placeholder,
+        .mdi-magnify,
+        .page-title {
+            @apply text-slate-200;
+        }
+    }
+}

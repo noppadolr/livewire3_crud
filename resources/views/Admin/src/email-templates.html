@@ -1,0 +1,63 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Starter Page"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Email Templates"})
+
+            <main class="p-6">
+
+                <div class="card">
+                    <div class="p-6">
+                        <div class="grid lg:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="mb-4 header-title text-base">Basic action email</h4>
+                                <a href="email-templates-action.html" target="_blank"> <img src="assets/images/email/1.png" class="w-full"> </a>
+                            </div>
+                            <div>
+                                <h4 class="mb-4 header-title text-base">Email alert</h4>
+                                <a href="email-templates-alert.html" target="_blank"> <img src="assets/images/email/2.png" class="w-full"> </a>
+                            </div>
+                            <div>
+                                <h4 class="mb-4 header-title text-base">Billing email</h4>
+                                <a href="email-templates-billing.html" target="_blank"> <img src="assets/images/email/3.png" class="w-full"> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

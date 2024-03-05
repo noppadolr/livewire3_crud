@@ -1,0 +1,72 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Polar Area Charts"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Polar Area Charts"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Basic Polar Area Chart</h4> <!-- card-title end -->
+                            <div dir="ltr">
+                                <div id="basic-polar-area" class="apex-charts" data-colors="#3e60d5,#6c757d,#47ad77,#fa5c7c,#ffbc00,#39afd1"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Monochrome Polar Area</h4> <!-- card-title end -->
+                            <div dir="ltr">
+                                <div id="monochrome-polar-area" class="apex-charts" data-colors="#6c757d"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart Polar Area Demo js -->
+    <script src="assets/js/pages/apex-polar-area.init.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Avatars"})
+
+            <main class="p-6">
+
+                <div class="grid lg:grid-cols-2 grid-cols-1 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Sizing - Images</h4>
+
+                            <div class="flex flex-wrap items-end gap-6">
+                                <img src="assets/images/users/user-2.jpg" alt="image" class="rounded h-6 w-6">
+
+                                <img src="assets/images/users/user-3.jpg" alt="image" class="rounded h-9 w-9">
+
+                                <img src="assets/images/users/user-4.jpg" alt="image" class="rounded h-14 w-14">
+
+                                <img src="assets/images/users/user-5.jpg" alt="image" class="rounded h-20 w-20">
+
+                                <img src="assets/images/users/user-6.jpg" alt="image" class="rounded h-24 w-24">
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Rounded Circle</h4>
+
+                            <div class="flex flex-wrap items-end gap-6">
+                                <img src="assets/images/users/user-7.jpg" alt="image" class="rounded-full h-14 w-14">
+
+                                <img src="assets/images/users/user-8.jpg" alt="image" class="rounded-full h-20 w-20">
+
+                                <img src="assets/images/users/user-9.jpg" alt="image" class="rounded-full h-24 w-24">
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Sizing - Background Color</h4>
+
+                            <div class="flex flex-wrap items-end gap-6">
+                                <span class="bg-primary text-white text-sm rounded flex items-center justify-center h-6 w-6">CT</span>
+
+                                <span class="bg-success text-white text-base rounded flex items-center justify-center h-9 w-9 mt-8">CT</span>
+
+                                <span class="bg-info/30 text-info text-lg rounded flex items-center justify-center w-14 h-14">CT</span>
+
+                                <span class="bg-danger text-white rounded text-xl flex items-center justify-center h-20 w-20">CT</span>
+
+                                <span class="bg-warning/30 text-2xl text-warning rounded flex items-center justify-center h-24 w-24">CT </span>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Rounded Circle Background</h4>
+
+                            <div class="flex flex-wrap items-end gap-6">
+                                <span class="bg-secondary/30 text-secondary rounded-full text-lg flex items-center justify-center h-14 w-14">CT</span>
+
+                                <span class="bg-light text-dark rounded-full text-xl flex items-center justify-center h-20 w-20">CT</span>
+
+                                <span class="bg-primary/30 text-primary rounded-full text-2xl flex items-center justify-center h-24 w-24">CT</span>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="lg:col-span-2 col-span-1">
+                        <div class="card">
+                            <div class="p-6">
+                                <h4 class="card-title mb-6">Images Shapes</h4>
+
+                                <div class="flex flex-wrap items-end gap-6 lg:gap-20">
+                                    <img src="assets/images/small/img-2.jpg" alt="image" class="rounded w-52">
+
+                                    <img src="assets/images/users/user-5.jpg" alt="image" class="rounded w-32">
+
+                                    <img src="assets/images/users/user-7.jpg" alt="image" class="rounded-full w-32 h-32">
+
+                                    <img src="assets/images/small/img-3.jpg" alt="image" class="rounded p-1 bg-gray-100 dark:bg-gray-700 dark:border-gray-600 border w-52">
+
+                                    <img src="assets/images/users/user-8.jpg" alt="image" class="rounded-full p-1 bg-gray-100 dark:bg-gray-700 dark:border-gray-600 border w-32">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

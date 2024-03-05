@@ -1,0 +1,56 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Login"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="container max-w-xl mx-auto">
+        <div class="text-sm max-w-2xl block mx-auto p-5">
+            <div class="card">
+                <table class="w-full">
+                    <tr class="bg-primary text-white text-center flex flex-col p-5">
+                        <td>
+                            <a href="#"> <img src="assets/images/logo-light.png" class="h-6 mx-auto" alt="logo" /></a>
+                        </td>
+                        <td>
+                            <span class="block mt-2">Warning: You're approaching your limit. Please upgrade.</span>
+                        </td>
+                    </tr>
+                    <tr class="flex flex-col p-5">
+                        <td class="block mb-5">
+                            You have <span class="text-black font-semibold">1 free report</span> remaining.
+                        </td>
+                        <td class="block mb-5">
+                            Add your credit card now to upgrade your account to a premium plan to ensure you don't miss out on any reports.
+                        </td>
+                        <td class="block mb-8">
+                            <a href="#" class="btn bg-success text-white rounded-md py-3">Upgrade My Account</a>
+                        </td>
+                        <td class="block mb-4">
+                            Dashboard Thanks for choosing <b>Adminto</b> Admin.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="text-center text-gray-500 mt-7">
+                <a href="#" class="underline text-sm">Unsubscribe</a>
+                from these alerts.
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+</body>
+
+</html>

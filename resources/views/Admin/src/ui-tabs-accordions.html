@@ -1,0 +1,477 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Tabs & Accordions"})
+
+            <main class="p-6">
+
+                <div class="grid xl:grid-cols-2 grid-cols-1 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Basic</h4>
+
+                            <div data-fc-type="tab">
+                                <nav class="flex space-x-3 border-b border-gray-200 dark:border-gray-700" aria-label="Tabs">
+                                    <button data-fc-target="#home" type="button" class="fc-tab-active:border-primary fc-tab-active:text-primary font-medium py-4 px-1 inline-flex items-center gap-2 border-b-2 border-transparent -mb-px transition-all text-sm whitespace-nowrap text-gray-500 hover:text-primary active">
+                                        Home
+                                    </button>
+                                    <button data-fc-target="#profile" type="button" class="fc-tab-active:border-primary fc-tab-active:text-primary font-medium py-4 px-1 inline-flex items-center gap-2 border-b-2 border-transparent -mb-px transition-all text-sm whitespace-nowrap text-gray-500 hover:text-primary">
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#messages" type="button" class="fc-tab-active:border-primary fc-tab-active:text-primary font-medium py-4 px-1 inline-flex items-center gap-2 border-b-2 border-transparent -mb-px transition-all text-sm whitespace-nowrap text-gray-500 hover:text-primary">
+                                        Messages
+                                    </button>
+                                </nav>
+
+                                <div class="mt-3 overflow-hidden">
+                                    <div id="home" class="active fc-tab-active:opacity-100 opacity-0 transition-all duration-300 transform" role="tabpanel" aria-labelledby="home">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                    <div id="profile" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby="profile">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                    </div>
+                                    <div id="messages" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby="messages">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Default Tabs</h4>
+
+                            <div data-fc-type="tab">
+                                <nav class="flex space-x-2 border-b border-gray-200 dark:border-gray-700" aria-label="Tabs" role="tablist">
+                                    <button data-fc-target="#home2" type="button" class="fc-tab-active:bg-white dark:fc-tab-active:bg-gray-800 fc-tab-active:border fc-tab-active:border-b-transparent dark:fc-tab-active:border-gray-700 dark:fc-tab-active:border-b-transparent -mb-px py-2 px-3 inline-flex items-center gap-2 font-medium text-center text-gray-600 dark:text-gray-300 rounded-t hover:text-primary active">
+                                        Home
+                                    </button>
+                                    <button data-fc-target="#profile2" type="button" class="fc-tab-active:bg-white dark:fc-tab-active:bg-gray-800 fc-tab-active:border fc-tab-active:border-b-transparent dark:fc-tab-active:border-gray-700 dark:fc-tab-active:border-b-transparent -mb-px py-2 px-3 inline-flex items-center gap-2 font-medium text-center text-gray-600 dark:text-gray-300 rounded-t hover:text-primary">
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#messages2" type="button" class="fc-tab-active:bg-white dark:fc-tab-active:bg-gray-800 fc-tab-active:border fc-tab-active:border-b-transparent dark:fc-tab-active:border-gray-700 dark:fc-tab-active:border-b-transparent -mb-px py-2 px-3 inline-flex items-center gap-2 font-medium text-center text-gray-600 dark:text-gray-300 rounded-t hover:text-primary">
+                                        Messages
+                                    </button>
+                                </nav>
+
+                                <div class="mt-5">
+                                    <div id="home2" role="tabpanel" aria-labelledby="home2">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                    <div id="profile2" class="hidden" role="tabpanel" aria-labelledby="profile2">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                    </div>
+                                    <div id="messages2" class="hidden" role="tabpanel" aria-labelledby="messages2">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Tabs Justified</h4>
+
+                            <div data-fc-type="tab">
+                                <nav class="relative z-0 flex space-x-2" aria-label="Tabs" role="tablist">
+                                    <button data-fc-target="#home1" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center active">
+                                        Home
+                                    </button>
+                                    <button data-fc-target="#profile1" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#messages1" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        Messages
+                                    </button>
+                                </nav>
+
+                                <div class="mt-3">
+                                    <div id="home1" role="tabpanel" aria-labelledby="home1">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                    <div id="profile1" class="hidden" role="tabpanel" aria-labelledby="profile1">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                    </div>
+                                    <div id="messages1" class="hidden" role="tabpanel" aria-labelledby="messages1">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Pill tab</h4>
+
+                            <div data-fc-type="tab">
+                                <nav class="flex space-x-2" aria-label="Tabs">
+                                    <button data-fc-target="#home3" type="button" class="fc-tab-active:bg-primary fc-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent font-medium text-center text-gray-600 dark:text-gray-300 rounded hover:text-primary dark:hover:text-gray-400 active">
+                                        Home
+                                    </button>
+                                    <button data-fc-target="#profile3" type="button" class="fc-tab-active:bg-primary fc-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent font-medium text-center text-gray-600 dark:text-gray-300 rounded hover:text-primary dark:hover:text-gray-400">
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#messages3" type="button" class="fc-tab-active:bg-primary fc-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent font-medium text-center text-gray-600 dark:text-gray-300 rounded hover:text-primary dark:hover:text-gray-400">
+                                        Messages
+                                    </button>
+                                </nav>
+
+                                <div class="mt-3">
+                                    <div id="home3" class="active fc-tab-active:opacity-100 opacity-0 transition-all duration-300 transform" role="tabpanel" aria-labelledby="home3">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                    <div id="profile3" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby=" profile3">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                    </div>
+                                    <div id="messages3" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby="messages3">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Tabs Vertical Left</h4>
+
+                            <div data-fc-type="tab" class="grid md:grid-cols-5 gap-5">
+                                <nav class="flex md:flex-col gap-3 space-y-2" aria-label="Tabs">
+                                    <button data-fc-target="#home4" type="button" class="fc-tab-active:bg-primary fc-tab-active:text-white text-gray-600 dark:text-gray-300 rounded btn bg-transparent active">
+                                        Home
+                                    </button>
+                                    <button data-fc-target="#profile4" type="button" class="fc-tab-active:bg-primary fc-tab-active:text-white text-gray-600 dark:text-gray-300 rounded btn bg-transparent">
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#messages4" type="button" class="fc-tab-active:bg-primary fc-tab-active:text-white text-gray-600 dark:text-gray-300 rounded btn bg-transparent">
+                                        Messages
+                                    </button>
+                                </nav>
+
+                                <div class="md:col-span-4">
+                                    <div id="home4" class="active fc-tab-active:opacity-100 opacity-0 transition-all duration-300 transform" role="tabpanel" aria-labelledby="home4">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                    <div id="profile4" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby=" profile4">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                    </div>
+                                    <div id="messages4" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby="messages4">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Bar with tab</h4>
+
+                            <div data-fc-type="tab">
+                                <nav class="relative z-0 flex border rounded overflow-hidden dark:border-gray-700" aria-label="Tabs">
+                                    <button data-fc-target="#home5" type="button" class="fc-tab-active:border-b-primary dark:fc-tab-active:border-b-primary fc-tab-active:text-gray-900 dark:fc-tab-active:text-white relative min-w-0 flex-1 bg-white first:border-l-0 border-l border-b-2 py-4 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:border-l-gray-700 dark:border-b-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-400 active">
+                                        Home
+                                    </button>
+                                    <button data-fc-target="#profile5" type="button" class="fc-tab-active:border-b-primary dark:fc-tab-active:border-b-primary fc-tab-active:text-gray-900 dark:fc-tab-active:text-white relative min-w-0 flex-1 bg-white first:border-l-0 border-l border-b-2 py-4 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:border-l-gray-700 dark:border-b-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-400">
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#messages5" type="button" class="fc-tab-active:border-b-primary dark:fc-tab-active:border-b-primary fc-tab-active:text-gray-900 dark:fc-tab-active:text-white relative min-w-0 flex-1 bg-white first:border-l-0 border-l border-b-2 py-4 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 dark:bg-gray-800 dark:border-l-gray-700 dark:border-b-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-400">
+                                        Messages
+                                    </button>
+                                </nav>
+
+                                <div class="mt-3">
+                                    <div id="home5" class="active fc-tab-active:opacity-100 opacity-0 transition-all duration-300 transform" role="tabpanel" aria-labelledby="home5">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                    <div id="profile5" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby=" profile5">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                    </div>
+                                    <div id="messages5" class="hidden fc-tab-active:opacity-100 transition-all duration-300 transform opacity-0" role="tabpanel" aria-labelledby="messages5">
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                        <p class="text-gray-500 dark:text-gray-400">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Bar with tab</h4>
+
+                            <div class="pt-5">
+                                <div data-fc-type="accordion" class="space-y-2">
+
+                                    <!-- Accordion item one -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            <i class="mdi mdi-help-circle me-1 text-primary"></i>
+                                            What is Vakal text here?
+                                        </button> <!-- button end -->
+
+                                        <div class="w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                    <!-- Accordion item two -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            <i class="mdi mdi-help-circle me-1 text-primary"></i>
+                                            Why use Vakal text here?
+                                        </button> <!-- button end -->
+
+                                        <div class="hidden w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                    <!-- Accordion item three -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            <i class="mdi mdi-help-circle me-1 text-primary"></i>
+                                            How many variations exist?
+                                        </button> <!-- button end -->
+
+                                        <div class="hidden w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                    <!-- Accordion item four -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            <i class="mdi mdi-help-circle me-1 text-primary"></i>
+                                            What is Vakal text here?
+                                        </button> <!-- button end -->
+
+                                        <div class="hidden w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                </div> <!-- accordion end -->
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Bar with tab</h4>
+
+                            <div class="pt-5">
+                                <div data-fc-type="accordion" class="space-y-1">
+
+                                    <!-- Accordion item one -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center justify-between gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            Q. Can I use this template for my client?
+                                        </button> <!-- button end -->
+
+                                        <div class="w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                    <!-- Accordion item two -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center justify-between gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            Q. Can this theme work with Wordpress?
+                                        </button> <!-- button end -->
+
+                                        <div class="hidden w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                    <!-- Accordion item three -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center justify-between gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            Q. How do I get help with the theme?
+                                        </button> <!-- button end -->
+
+                                        <div class="hidden w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                    <!-- Accordion item four -->
+                                    <div>
+                                        <button data-fc-type="collapse" class="shadow bg-gray-100 dark:bg-gray-700 py-3 px-5 inline-flex items-center justify-between gap-x-3 w-full text-left font-medium transition text-gray-500 dark:text-gray-200">
+                                            Q. Will you regularly give updates of Adminto ?
+                                        </button> <!-- button end -->
+
+                                        <div class="hidden w-full overflow-hidden transition-[height] duration-300 shadow">
+                                            <div class="py-4 px-5 border-gray-200 dark:border-gray-700">
+                                                <p class="text-gray-800 dark:text-gray-200">
+                                                    Tailwind CSS offers a seamless way to build modern websites without
+                                                    having to leave your HTML. The framework functions by scanning all of
+                                                    your HTML files, JavaScript components, and templates for class names,
+                                                    automatically generating corresponding styles, and writing them to a
+                                                    static CSS file. This approach is fast, flexible, and reliable,
+                                                    requiring zero runtime. Whether you need to create form layouts, tables,
+                                                    or modal dialogs, Tailwind CSS provides everything necessary to design
+                                                    beautiful, responsive web applications. Additionally, the framework
+                                                    includes checkout forms, shopping carts, and product views, making it
+                                                    the ideal choice for developing your next e-commerce front-end.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- border end -->
+
+                                </div> <!-- accordion end -->
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

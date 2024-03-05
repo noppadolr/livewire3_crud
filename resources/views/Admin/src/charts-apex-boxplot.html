@@ -1,0 +1,81 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Boxplot Charts"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title": "Boxplot Charts"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Basic Boxplot</h4>
+                            <div dir="ltr">
+                                <div id="basic-boxplot" class="apex-charts" data-colors="#3e60d5,#47ad77"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Scatter Boxplot </h4>
+                            <div dir="ltr">
+                                <div id="scatter-boxplot" class="apex-charts" data-colors="#fa5c7c,#6c757d"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Horizontal BoxPlot</h4>
+                            <div dir="ltr">
+                                <div id="horizontal-boxplot" class="apex-charts" data-colors="#3e60d5,#47ad77,#e3eaef"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart Boxplot Demo js -->
+    <script src="assets/js/pages/apex-boxplot.init.js"></script>
+
+</body>
+
+</html>

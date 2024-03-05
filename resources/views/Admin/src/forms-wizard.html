@@ -1,0 +1,390 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Form Wizard"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Form Wizard"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Basic Wizard</h4>
+
+                            <div data-fc-type="tab" id="basicwizard">
+                                <nav class="relative z-0 flex space-x-2 form-wizard" aria-label="Tabs" role="tablist">
+                                    <button data-fc-target="#account1" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center active">
+                                        <i class="mdi mdi-account-circle me-1"></i>
+                                        Account
+                                    </button>
+                                    <button data-fc-target="#profile1" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-person me-1"></i>
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#finish1" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-checkbox-marked-circle-outline me-1"></i>
+                                        Finish
+                                    </button>
+                                </nav>
+
+                                <div class="mt-6">
+                                    <div class="flex flex-col gap-6" id="account1" role="tabpanel" aria-labelledby="account1">
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="userName">User name</label>
+                                            <input type="text" class="form-input" id="userName" name="userName" value="Coderthemes">
+                                        </div>
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="password"> Password</label>
+                                            <input type="password" id="password" name="password" class="form-input" value="123456789">
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="confirm">Re Password</label>
+                                            <input type="password" id="confirm" name="confirm" class="form-input" value="123456789">
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" id="profile1" role="tabpanel" aria-labelledby="profile1">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="name"> First name</label>
+                                                <input type="text" id="name" name="name" class="form-input" value="Francis">
+                                            </div>
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="surname"> Last name</label>
+                                                <input type="text" id="surname" name="surname" class="form-input" value="Brinkman">
+                                            </div>
+
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="email">Email</label>
+                                                <input type="email" id="email" name="email" class="form-input" value="cory1979@hotmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="finish1" class="hidden" role="tabpanel" aria-labelledby="finish1">
+                                        <div class="text-center">
+                                            <h2 class="text-3xl mb-2"><i class="mdi mdi-check-all"></i></h2>
+                                            <h3 class="text-2xl mb-2">Thank you !</h3>
+
+                                            <p class="w-3/4 mb-3 mx-auto text-gray-500">Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam
+                                                mattis dictum aliquet.</p>
+
+                                            <div class="mb-3">
+                                                <div class="form-check d-inline-block">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                    <label class="form-check-label text-gray-500" for="customCheck1">I agree with the Terms and Conditions</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="wizard flex items-center justify-between mt-6">
+                                        <li class="previous list-inline-item">
+                                            <a href="javascript: void(0);" class="btn bg-secondary text-white">Previous</a>
+                                        </li>
+                                        <li class="next list-inline-item float-end">
+                                            <a href="javascript: void(0);" class="btn bg-secondary text-white">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Button Wizard</h4>
+
+                            <div data-fc-type="tab" id="btnwizard">
+                                <nav class="relative z-0 flex space-x-2" aria-label="Tabs" role="tablist">
+                                    <button data-fc-target="#account2" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center active">
+                                        <i class="mdi mdi-account-circle me-1"></i>
+                                        Account
+                                    </button>
+                                    <button data-fc-target="#profile2" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-person me-1"></i>
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#finish2" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-checkbox-marked-circle-outline me-1"></i>
+                                        Finish
+                                    </button>
+                                </nav>
+
+                                <div class="mt-6">
+                                    <div class="flex flex-col gap-6" id="account2" role="tabpanel" aria-labelledby="account2">
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="userName">User name</label>
+                                            <input type="text" class="form-input" id="userName" name="userName" value="Coderthemes">
+                                        </div>
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="password"> Password</label>
+                                            <input type="password" id="password" name="password" class="form-input" value="123456789">
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="confirm">Re Password</label>
+                                            <input type="password" id="confirm" name="confirm" class="form-input" value="123456789">
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" id="profile2" role="tabpanel" aria-labelledby="profile2">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="name"> First name</label>
+                                                <input type="text" id="name" name="name" class="form-input" value="Francis">
+                                            </div>
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="surname"> Last name</label>
+                                                <input type="text" id="surname" name="surname" class="form-input" value="Brinkman">
+                                            </div>
+
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="email">Email</label>
+                                                <input type="email" id="email" name="email" class="form-input" value="cory1979@hotmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="finish2" class="hidden" role="tabpanel" aria-labelledby="finish2">
+                                        <div class="text-center">
+                                            <h2 class="text-3xl mb-2"><i class="mdi mdi-check-all"></i></h2>
+                                            <h3 class="text-2xl mb-2">Thank you !</h3>
+
+                                            <p class="w-3/4 mb-3 mx-auto text-gray-500">Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam
+                                                mattis dictum aliquet.</p>
+
+                                            <div class="mb-3">
+                                                <div class="form-check d-inline-block">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                    <label class="form-check-label text-gray-500" for="customCheck1">I agree with the Terms and Conditions</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="wizard flex items-center justify-between mt-6">
+                                        <li class="next list-inline-item float-end">
+                                            <input type='button' class='btn bg-secondary text-white button-first cursor-pointer' name='first' value='First' />
+                                            <input type='button' class='btn bg-secondary text-white button-previous cursor-pointer' name='previous' value='Previous' />
+                                        </li>
+                                        <li class="previous list-inline-item">
+                                            <input type='button' class='btn bg-secondary text-white button-next cursor-pointer' name='next' value='Next' />
+                                            <input type='button' class='btn bg-secondary text-white button-last cursor-pointer' name='last' value='Last' />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Wizard With Progress Bar</h4>
+
+                            <div data-fc-type="tab" id="progressbarwizard">
+                                <nav class="relative z-0 flex space-x-2" aria-label="Tabs" role="tablist">
+                                    <button data-fc-target="#account3" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center active">
+                                        <i class="mdi mdi-account-circle me-1"></i>
+                                        Account
+                                    </button>
+                                    <button data-fc-target="#profile3" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-person me-1"></i>
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#finish3" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-checkbox-marked-circle-outline me-1"></i>
+                                        Finish
+                                    </button>
+                                </nav>
+
+                                <div class="mt-6">
+                                    <div class="flex flex-col gap-6" id="account3" role="tabpanel" aria-labelledby="account3">
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="userName">User name</label>
+                                            <input type="text" class="form-input" id="userName" name="userName" value="Coderthemes">
+                                        </div>
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="password"> Password</label>
+                                            <input type="password" id="password" name="password" class="form-input" value="123456789">
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="confirm">Re Password</label>
+                                            <input type="password" id="confirm" name="confirm" class="form-input" value="123456789">
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" id="profile3" role="tabpanel" aria-labelledby="profile3">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="name"> First name</label>
+                                                <input type="text" id="name" name="name" class="form-input" value="Francis">
+                                            </div>
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="surname"> Last name</label>
+                                                <input type="text" id="surname" name="surname" class="form-input" value="Brinkman">
+                                            </div>
+
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="email">Email</label>
+                                                <input type="email" id="email" name="email" class="form-input" value="cory1979@hotmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="finish3" class="hidden" role="tabpanel" aria-labelledby="finish3">
+                                        <div class="text-center">
+                                            <h2 class="text-3xl mb-2"><i class="mdi mdi-check-all"></i></h2>
+                                            <h3 class="text-2xl mb-2">Thank you !</h3>
+
+                                            <p class="w-3/4 mb-3 mx-auto text-gray-500">Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam
+                                                mattis dictum aliquet.</p>
+
+                                            <div class="mb-3">
+                                                <div class="form-check d-inline-block">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                    <label class="form-check-label text-gray-500" for="customCheck1">I agree with the Terms and Conditions</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="wizard flex items-center justify-between mt-6">
+                                        <li class="previous list-inline-item">
+                                            <a href="javascript: void(0);" class="btn bg-secondary text-white">Previous</a>
+                                        </li>
+                                        <li class="next list-inline-item float-end">
+                                            <a href="javascript: void(0);" class="btn bg-secondary text-white">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">  
+                        <div class="p-6">
+                            <h4 class="card-title mb-6"> Wizard With Form Validation</h4>
+
+                            <div data-fc-type="tab" id="rootwizard">
+                                <nav class="relative z-0 flex space-x-2" aria-label="Tabs" role="tablist">
+                                    <button data-fc-target="#account4" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center active">
+                                        <i class="mdi mdi-account-circle me-1"></i>
+                                        Account
+                                    </button>
+                                    <button data-fc-target="#profile4" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-person me-1"></i>
+                                        Profile
+                                    </button>
+                                    <button data-fc-target="#finish4" type="button" class="fc-tab-active:bg-primary dark:fc-tab-active:bg-primary fc-tab-active:text-white bg-gray-100 dark:bg-transparent text-gray-600 dark:text-gray-300 hover:text-primary transition-all duration-300 rounded relative py-2 w-full font-medium text-center">
+                                        <i class="mdi mdi-checkbox-marked-circle-outline me-1"></i>
+                                        Finish
+                                    </button>
+                                </nav>
+
+                                <div class="mt-6">
+                                    <div class="flex flex-col gap-6" id="account4" role="tabpanel" aria-labelledby="account4">
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="userName">User name</label>
+                                            <input type="text" class="form-input" id="userName" name="userName" value="Coderthemes">
+                                        </div>
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="password"> Password</label>
+                                            <input type="password" id="password" name="password" class="form-input" value="123456789">
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <label class="w-1/3 form-label" for="confirm">Re Password</label>
+                                            <input type="password" id="confirm" name="confirm" class="form-input" value="123456789">
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" id="profile4" role="tabpanel" aria-labelledby="profile4">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="name"> First name</label>
+                                                <input type="text" id="name" name="name" class="form-input" value="Francis">
+                                            </div>
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="surname"> Last name</label>
+                                                <input type="text" id="surname" name="surname" class="form-input" value="Brinkman">
+                                            </div>
+
+                                            <div class="flex items-center">
+                                                <label class="w-1/3 form-label" for="email">Email</label>
+                                                <input type="email" id="email" name="email" class="form-input" value="cory1979@hotmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="finish4" class="hidden" role="tabpanel" aria-labelledby="finish4">
+                                        <div class="text-center">
+                                            <h2 class="text-3xl mb-2"><i class="mdi mdi-check-all"></i></h2>
+                                            <h3 class="text-2xl mb-2">Thank you !</h3>
+
+                                            <p class="w-3/4 mb-3 mx-auto text-gray-500">Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam
+                                                mattis dictum aliquet.</p>
+
+                                            <div class="mb-3">
+                                                <div class="form-check d-inline-block">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                    <label class="form-check-label text-gray-500" for="customCheck1">I agree with the Terms and Conditions</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="wizard flex items-center justify-between mt-6">
+                                        <li class="previous list-inline-item">
+                                            <a href="javascript: void(0);" class="btn bg-secondary text-white">Previous</a>
+                                        </li>
+                                        <li class="next list-inline-item float-end">
+                                            <a href="javascript: void(0);" class="btn bg-secondary text-white">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

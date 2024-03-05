@@ -1,0 +1,125 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Draggable Cards"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Draggable Cards"})
+
+            <main class="p-6">
+
+                <div class="grid lg:grid-cols-3 gap-6" id="gridDemo">
+
+                    <div class="card text-white bg-primary dark:bg-primary">
+                        <div class="p-6">
+                            <blockquote>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                    erat a ante.</p>
+                                <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div> <!-- card end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card end -->
+
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-4">Card title</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Some quick example text to build on the card title and make
+                                up the bulk of the card's content.</p>
+                        </div>
+                    </div> <!-- card end -->
+
+                    <div class="card text-white bg-danger dark:bg-danger">
+                        <div class="p-6">
+                            <blockquote>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                    erat a ante.</p>
+                                <footer class="text-xs text-white/50">Someone famous in <cite title="Source Title">Source Title</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div> <!-- card end -->
+
+                </div> <!-- grid end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- sortablejs -->
+    <script src="assets/libs/sortablejs/Sortable.min.js"></script>
+
+    <!-- Dragula Demo Component js -->
+    <script src="assets/js/pages/extended-sortable.init.js"></script>
+
+</body>
+
+</html>

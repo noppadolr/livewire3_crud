@@ -1,0 +1,109 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Validation"})
+
+    @@include('./partials/head-css.html')
+
+    <!-- quill css -->
+    <link href="assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Quilljs Editors"})
+
+            <main class="p-6">
+
+                <div class="flex flex-col gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+
+                            <div class="flex justify-between items-center">
+                                <h4 class="card-title">Snow Editor</h4>
+                            </div>
+
+                            <div class="pt-5">
+                                <div id="snow-editor" style="height: 300px;">
+                                    <h3><span class="ql-size-large">Hello World!</span></h3>
+                                    <p><br></p>
+                                    <h3>This is a simple editable area.</h3>
+                                    <p><br></p>
+                                    <ul>
+                                        <li>Select a text to reveal the toolbar.</li>
+                                        <li>Edit rich document on-the-fly, so elastic!</li>
+                                    </ul>
+                                    <p><br></p>
+                                    <p>End of simple area</p>
+                                </div> <!-- end snow-editor -->
+                            </div>
+
+                        </div>
+                    </div> <!-- end card -->
+
+                    <div class="card">
+                        <div class="p-6">
+
+                            <div class="flex justify-between items-center">
+                                <h4 class="card-title">Bubble Editor</h4>
+                            </div>
+
+                            <div class="pt-5">
+                                <div id="bubble-editor" style="height: 300px;">
+                                    <h3><span class="ql-size-large">Hello World!</span></h3>
+                                    <p><br></p>
+                                    <h3>This is a simple editable area.</h3>
+                                    <p><br></p>
+                                    <ul>
+                                        <li>Select a text to reveal the toolbar.</li>
+                                        <li>Edit rich document on-the-fly, so elastic!</li>
+                                    </ul>
+                                    <p><br></p>
+                                    <p>End of simple area</p>
+                                </div> <!-- end bubble-editor -->
+                            </div>
+
+                        </div>
+                    </div> <!-- end card -->
+
+                </div> <!-- end flex -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- quill js -->
+    <script src="assets/libs/quill/quill.min.js"></script>
+
+    <!-- form-editor js -->
+    <script src="assets/js/pages/form-editor.init.js"></script>
+
+</body>
+
+</html>

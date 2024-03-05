@@ -1,0 +1,442 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Buttons"})
+
+            <main class="p-6">
+
+                <div class="flex flex-col gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap xl:flex-nowrap gap-6">
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Default Buttons</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn bg-primary text-white">Primary</button>
+                                        <button type="button" class="btn bg-success text-white">Success</button>
+                                        <button type="button" class="btn bg-info text-white">Info</button>
+                                        <button type="button" class="btn bg-warning text-white">Warning</button>
+                                        <button type="button" class="btn bg-danger text-white">Danger</button>
+                                        <button type="button" class="btn bg-dark text-white">Dark</button>
+                                        <button type="button" class="btn bg-pink text-white">Pink</button>
+                                        <button type="button" class="btn bg-secondary text-white">Secondary</button>
+                                        <button type="button" class="btn bg-light text-gray-800">Light</button>
+                                        <button type="button" class="btn bg-link text-primary">Link</button>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Rounded Button</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn bg-primary text-white rounded-full">Primary</button>
+                                        <button type="button" class="btn bg-success text-white rounded-full">Success</button>
+                                        <button type="button" class="btn bg-info text-white rounded-full">Info</button>
+                                        <button type="button" class="btn bg-warning text-white rounded-full">Warning</button>
+                                        <button type="button" class="btn bg-danger text-white rounded-full">Danger</button>
+                                        <button type="button" class="btn bg-dark text-white rounded-full">Dark</button>
+                                        <button type="button" class="btn bg-pink text-white rounded-full">Pink</button>
+                                        <button type="button" class="btn bg-secondary text-white rounded-full">Secondary</button>
+                                        <button type="button" class="btn bg-white text-gray-800 border border-gray-200 rounded-full">White</button>
+                                        <button type="button" class="btn bg-light text-gray-800 rounded-full">Light</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap xl:flex-nowrap gap-6">
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Outline Buttons</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn border-primary text-primary hover:bg-primary hover:text-white">Primary</button>
+                                        <button type="button" class="btn border-success text-success hover:bg-success hover:text-white">Success</button>
+                                        <button type="button" class="btn border-info text-info hover:bg-info hover:text-white">Info</button>
+                                        <button type="button" class="btn border-warning text-warning hover:bg-warning hover:text-white">Warning</button>
+                                        <button type="button" class="btn border-danger text-danger hover:bg-danger hover:text-white">Danger</button>
+                                        <button type="button" class="btn border-dark text-dark hover:bg-dark hover:text-white">Dark</button>
+                                        <button type="button" class="btn border-pink text-pink hover:bg-pink hover:text-white">Pink</button>
+                                        <button type="button" class="btn border-secondary text-secondary hover:bg-secondary hover:text-white">Secondary</button>
+                                        <button type="button" class="btn border-light text-light hover:bg-light hover:text-gray-800">Light</button>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Outline Rounded Button</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn rounded-full border border-primary text-primary hover:bg-primary hover:text-white">Primary</button>
+                                        <button type="button" class="btn rounded-full border border-success text-success hover:bg-success hover:text-white">Success</button>
+                                        <button type="button" class="btn rounded-full border border-info text-info hover:bg-info hover:text-white">Info</button>
+                                        <button type="button" class="btn rounded-full border border-warning text-warning hover:bg-warning hover:text-white">Warning</button>
+                                        <button type="button" class="btn rounded-full border border-danger text-danger hover:bg-danger hover:text-white">Danger</button>
+                                        <button type="button" class="btn rounded-full border border-dark text-dark hover:bg-dark hover:text-white">Dark</button>
+                                        <button type="button" class="btn rounded-full border border-pink text-pink hover:bg-pink hover:text-white">Pink</button>
+                                        <button type="button" class="btn rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white">Secondary</button>
+                                        <button type="button" class="btn rounded-full border border-light text-light hover:bg-light hover:text-gray-800">Light</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap xl:flex-nowrap gap-6">
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Buttons Labels</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3 mb-4  ">
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-success text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-check-all"></i></button>
+                                            <button class="btn bg-success text-white rounded-none">Success</button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-danger text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-close-circle-outline"></i></button>
+                                            <button class="btn bg-danger text-white rounded-none">Danger</button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-info text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert-circle-outline"></i></button>
+                                            <button class="btn bg-info text-white rounded-none">Info</button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-warning text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert"></i></button>
+                                            <button class="btn bg-warning text-white rounded-none">Warning</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-success text-white rounded-none">Success</button>
+                                            <button class="btn bg-success text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-check-all"></i></button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-danger text-white rounded-none">Danger</button>
+                                            <button class="btn bg-danger text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-close-circle-outline"></i></button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-info text-white rounded-none">Info</button>
+                                            <button class="btn bg-info text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert-circle-outline"></i></button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-sm overflow-hidden">
+                                            <button class="btn bg-warning text-white rounded-none">Warning</button>
+                                            <button class="btn bg-warning text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Outline Rounded Button</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3 mb-4  ">
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-success text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-check-all"></i></button>
+                                            <button class="btn bg-success text-white rounded-none">Success</button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-danger text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-close-circle-outline"></i></button>
+                                            <button class="btn bg-danger text-white rounded-none">Danger</button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-info text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert-circle-outline"></i></button>
+                                            <button class="btn bg-info text-white rounded-none">Info</button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-warning text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert"></i></button>
+                                            <button class="btn bg-warning text-white rounded-none">Warning</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-success text-white rounded-none">Success</button>
+                                            <button class="btn bg-success text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-check-all"></i></button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-danger text-white rounded-none">Danger</button>
+                                            <button class="btn bg-danger text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-close-circle-outline"></i></button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-info text-white rounded-none">Info</button>
+                                            <button class="btn bg-info text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert-circle-outline"></i></button>
+                                        </div>
+
+                                        <div type="button" class="flex rounded-full overflow-hidden">
+                                            <button class="btn bg-warning text-white rounded-none">Warning</button>
+                                            <button class="btn bg-warning text-white rounded-none px-3 relative after:content-[''] after:absolute after:inset-0 after:bg-black/10"><i class="mdi mdi-alert"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap xl:flex-nowrap gap-6">
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Soft Buttons</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="border border-primary/20 btn bg-primary/20 text-primary hover:bg-primary hover:text-white">Primary</button>
+                                        <button type="button" class="border border-success/20 btn bg-success/20 text-success hover:bg-success hover:text-white">Success</button>
+                                        <button type="button" class="border border-info/20 btn bg-info/20 text-info hover:bg-info hover:text-white">Info</button>
+                                        <button type="button" class="border border-warning/20 btn bg-warning/20 text-warning hover:bg-warning hover:text-white">Warning</button>
+                                        <button type="button" class="border border-danger/20 btn bg-danger/20 text-danger hover:bg-danger hover:text-white">Danger</button>
+                                        <button type="button" class="border border-dark/20 btn bg-dark/20 text-dark hover:bg-dark hover:text-white">Dark</button>
+                                        <button type="button" class="border border-pink/20 btn bg-pink/20 text-pink hover:bg-pink hover:text-white">Pink</button>
+                                        <button type="button" class="border border-secondary/20 btn bg-secondary/20 text-secondary hover:bg-secondary hover:text-white">Secondary</button>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6">Soft Rounded Button</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="border border-primary/20 btn rounded-full bg-primary/20 text-primary hover:bg-primary hover:text-white">Primary</button>
+                                        <button type="button" class="border border-success/20 btn rounded-full bg-success/20 text-success hover:bg-success hover:text-white">Success</button>
+                                        <button type="button" class="border border-info/20 btn rounded-full bg-info/20 text-info hover:bg-info hover:text-white">Info</button>
+                                        <button type="button" class="border border-warning/20 btn rounded-full bg-warning/20 text-warning hover:bg-warning hover:text-white">Warning</button>
+                                        <button type="button" class="border border-danger/20 btn rounded-full bg-danger/20 text-danger hover:bg-danger hover:text-white">Danger</button>
+                                        <button type="button" class="border border-dark/20 btn rounded-full bg-dark/20 text-dark dark:text-slate-200 hover:bg-dark hover:text-white">Dark</button>
+                                        <button type="button" class="border border-pink/20 btn rounded-full bg-pink/20 text-pink dark:text-slate-200 hover:bg-pink hover:text-white">Pink</button>
+                                        <button type="button" class="border border-secondary/20 btn rounded-full bg-secondary/20 text-secondary hover:bg-secondary hover:text-white">Secondary</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap xl:flex-nowrap gap-6">
+                                <div class="xl:w-1/3 w-full">
+                                    <h4 class="card-title mb-6">Button Width</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn bg-primary text-white w-20">xs</button>
+                                        <button type="button" class="btn bg-success text-white w-24">Small</button>
+                                        <button type="button" class="btn bg-info text-white w-28">Middle</button>
+                                        <button type="button" class="btn bg-warning text-white w-32">Large</button>
+                                        <button type="button" class="btn bg-danger text-white w-36">Extra Large</button>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/3 w-full">
+                                    <h4 class="card-title mb-6">Button Sizes</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn bg-pink text-lg text-white">Btn Large</button>
+                                        <button type="button" class="btn bg-secondary text-  text-white">Btn Normal</button>
+                                        <button type="button" class="btn bg-primary text-sm text-white">Btn Small</button>
+                                        <button type="button" class="btn bg-warning text-xs text-white">Btn Xs</button>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/3 w-full">
+                                    <h4 class="card-title mb-6">Button Disabled</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn bg-primary/60 text-white" disabled>Primary</button>
+                                        <button type="button" class="btn bg-success/60 text-white" disabled>Success</button>
+                                        <button type="button" class="btn bg-info/60 text-white" disabled>Info</button>
+                                        <button type="button" class="btn bg-warning/60 text-white" disabled>Warning</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex flex-wrap xl:flex-nowrap gap-6">
+
+                                <div class="xl:w-1/2 w-full 2xl:pe-14">
+                                    <h4 class="card-title mb-6">Icons Buttons</h4>
+
+                                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                                        <button type="button" class="btn bg-success text-white">
+                                            <i class="mdi mdi-heart-half-full"></i>
+                                        </button>
+                                        <button type="button" class="btn bg-danger text-white">
+                                            <i class="mdi mdi-close"></i>
+                                        </button>
+                                        <button type="button" class="btn bg-info text-white">
+                                            <i class="mdi mdi-music"></i>
+                                        </button>
+                                        <button type="button" class="btn bg-warning text-white">
+                                            <i class="mdi mdi-star"></i>
+                                        </button>
+                                        <button type="button" class="btn bg-primary text-white">
+                                            <i class="mdi mdi-cog"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <button type="button" class="btn bg-success text-white">
+                                            <i class="mdi mdi-heart me-2"></i>
+                                            Like
+                                        </button>
+                                        <button type="button" class="btn bg-dark text-white">
+                                            <i class="mdi mdi-email-outline me-2"></i>
+                                            Share
+                                        </button>
+                                        <button type="button" class="btn bg-info text-white">
+                                            <i class="mdi mdi-cloud-outline me-2"></i>
+                                            Cloud Hosting
+                                        </button>
+                                        <button type="button" class="btn bg-warning text-white">
+                                            Donate
+                                            <i class="mdi mdi-currency-btc ms-2"></i>
+                                        </button>
+                                    </div>
+
+                                    <h4 class="card-title mb-6 mt-8">Block Buttons</h4>
+
+                                    <div class="flex flex-wrap flex-col items-center gap-3">
+                                        <button type="button" class="btn bg-primary text-white text-lg w-full">Block Button</button>
+                                        <button type="button" class="btn bg-pink text-white text-sm w-full">Block Button</button>
+                                        <button type="button" class="btn bg-success text-white text-xs w-full">Block Button</button>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/2 w-full">
+                                    <h4 class="card-title mb-6 mt-8">Button Group</h4>
+
+                                    <div>
+                                        <div class="inline-flex overflow-hidden rounded-sm mb-2">
+                                            <button type="button" class="btn bg-secondary text-white rounded-none">Left</button>
+                                            <button type="button" class="btn bg-secondary text-white rounded-none">Middle</button>
+                                            <button type="button" class="btn bg-secondary text-white rounded-none">Right</button>
+                                        </div>
+
+                                        <div class="flex flex-wrap gap-1">
+                                            <div class="inline-flex overflow-hidden rounded-sm mb-2">
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">1</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">2</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">3</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">4</button>
+                                            </div>
+
+                                            <div class="inline-flex overflow-hidden rounded-sm mb-2">
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">5</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">6</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">7</button>
+                                            </div>
+
+                                            <div class="inline-flex overflow-hidden rounded-sm mb-2">
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">8</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="inline-flex overflow-hidden rounded-sm mb-2">
+                                            <button type="button" class="btn bg-secondary text-white rounded-none">1</button>
+                                            <button type="button" class="btn bg-primary text-white rounded-none">2</button>
+                                            <button type="button" class="btn bg-secondary text-white rounded-none">3</button>
+                                            <button data-fc-type="dropdown" type="button" class="btn bg-secondary text-white rounded-none py-2 px-3 inline-flex justify-center items-center font-medium align-middle transition-all text-sm" data-fc-offset="0">
+                                                Dropdown <i class="mdi mdi-chevron-down text-base ms-1"></i>
+                                            </button>
+
+                                            <div class="hidden transition-all duration-300 bg-white border shadow-md rounded-sm py-2 dark:bg-gray-800 dark:border-gray-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center">
+                                                <a class="flex items-center py-2 px-6 rounded-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                                                    Dropdown link
+                                                </a>
+                                                <a class="flex items-center py-2 px-6 rounded-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                                                    Dropdown link
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex gap-14">
+                                            <div class="inline-flex flex-col overflow-hidden rounded-sm mb-2">
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">Top</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">Middle</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">Bottom</button>
+                                            </div>
+
+                                            <div class="inline-flex flex-col overflow-hidden rounded-sm mb-2">
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">Button 1</button>
+                                                <button type="button" class="btn bg-secondary text-white rounded-none">Button 2</button>
+                                                <button data-fc-type="dropdown" type="button" class="btn bg-secondary text-white rounded-none py-2 px-3 inline-flex justify-center items-center font-medium align-middle transition-all text-sm" data-fc-offset="0">
+                                                    Button 3 <i class="mdi mdi-chevron-down text-base ms-1"></i>
+                                                </button>
+
+                                                <div class="hidden transition-all duration-300 bg-white border shadow-md rounded-sm py-2 dark:bg-gray-800 dark:border-gray-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center">
+                                                    <a class="flex items-center py-2 px-6 rounded-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                                                        Dropdown link
+                                                    </a>
+                                                    <a class="flex items-center py-2 px-6 rounded-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                                                        Dropdown link
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- flex-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Data Table"})
+
+    <!-- Gridjs Plugin css -->
+    <link href="assets/libs/gridjs/theme/mermaid.min.css" rel="stylesheet" type="text/css">
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Data Tables"})
+
+            <main class="p-6">
+
+                <div class="flex flex-col gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Basic</h4>
+
+                            <div>
+                                <div id="table-gridjs"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Pagination</h4>
+
+                            <div>
+                                <div id="table-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Search</h4>
+
+                            <div>
+                                <div id="table-search"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Sorting</h4>
+
+                            <div>
+                                <div id="table-sorting"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Loading State</h4>
+
+                            <div>
+                                <div id="table-loading-state"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Fixed Header</h4>
+
+                            <div>
+                                <div id="table-fixed-header"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Hidden Columns</h4>
+
+                            <div>
+                                <div id="table-hidden-column"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Gridjs Plugin js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+
+    <!-- Gridjs Demo js -->
+    <script src="assets/js/pages/table-gridjs.init.js"></script>
+
+</body>
+
+</html>

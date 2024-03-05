@@ -1,0 +1,84 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Radar Charts"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Radar Charts"})
+
+            <main class="p-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Basic Radar Chart</h4>
+                            <div dir="ltr">
+                                <div id="basic-radar" class="apex-charts" data-colors="#3e60d5"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Radar with Polygon-fill</h4>
+                            <div dir="ltr">
+                                <div id="radar-polygon" class="apex-charts" data-colors="#FF4560"></div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                    <div class="card">
+                        <div class="p-6">
+                            <h4 class="card-title mb-6">Radar – Multiple Series</h4>
+                            <div dir="ltr">
+                                <div id="radar-multiple-series" class="apex-charts" data-colors="#3e60d5,#02a8b5,#fd7e14"></div>
+                                <div class="text-center mt-2">
+                                    <button onclick="update()" class="btn btn-sm btn-primary">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- card-end -->
+
+                </div> <!-- grid-end -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+    <!-- Apex Chart js -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Apex Chart Radar Demo js -->
+    <script src="assets/js/pages/apex-radar.init.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,948 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Project List"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Kanban Board"})
+
+            <main class="p-6">
+                <div class="grid w-full">
+                    <div class="overflow-hidden text-gray-700 dark:text-slate-400">
+                        <div class="grid lg:grid-cols-3 custom-scroll gap-6 pb-4">
+
+                            <div>
+                                <div class="flex flex-col flex-shrink-0 rounded-md card p-4">
+
+                                    <div class="flex items-center justify-between mb-5">
+                                        <div>
+                                            <h5 class="text-lg text-info">Upcoming</h5>
+                                        </div>
+
+                                        <div class="z-10">
+                                            <button data-fc-target="dropdown-target1" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                <i class="mdi mdi-dots-vertical text-xl"></i>
+                                            </button>
+    
+                                            <div id="dropdown-target1" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                    Action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Another action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Something else
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Separated link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-4 kanban-board custom-scroll overflow-x-hidden overflow-y-auto px-1 h-full" id="kanbanborad-one">
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Improve animation loader</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-danger text-white">Urgent</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-2.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Write a release note for Admin v1.5</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-warning text-white">High</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-3.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Invite user to a project</a>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-4.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Code HTML email template for welcome email</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-danger text-white">Urgent</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-5.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex flex-wrap gap-3">
+                                            <div class="mx-auto">
+                                                <button class="btn bg-primary text-white rounded" data-fc-target="default-modal" data-fc-type="modal" type="button">+ Add New</button>
+
+                                                <div id="default-modal" class="pt-60 w-full h-full fixed top-0 left-0 z-50 transition-all duration-500 hidden overflow-y-auto">
+                                                    <div class="-translate-y-5 fc-modal-open:translate-y-0 fc-modal-open:opacity-100 opacity-0 duration-300 ease-in-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto flex flex-col bg-white shadow-sm rounded dark:bg-gray-800">
+                                                        <div class="flex justify-between items-center py-2.5 px-4 border-b dark:border-gray-700">
+                                                            <h3 class="font-medium text-gray-600 dark:text-white text-lg">
+                                                                Modal Title
+                                                            </h3>
+                                                            <button class="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 dark:text-gray-200" data-fc-dismiss type="button">
+                                                                <span class="mdi mdi-window-close text-2xl"></span>
+                                                            </button>
+                                                        </div><!-- End Modal Header -->
+                                                        <form role="form" class="p-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label dark:text-gray-200 font-normal" for="name">Task Name</label><br>
+                                                                <input type="text" class="form-input" id="name" placeholder="">
+                                                            </div>
+
+                                                            <div class="grid grid-cols-2 gap-5 mt-5">
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label dark:text-gray-200 font-normal" for="assign">Assign to</label>
+                                                                        <input type="text" class="form-input" id="assign" placeholder="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label dark:text-gray-200 font-normal" for="priority">Priority</label>
+                                                                        <input type="text" class="form-input" id="priority" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-2 gap-5 mt-5">
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label dark:text-gray-200 font-normal" for="Sdate">Start Date</label>
+                                                                        <input type="text" class="form-input" id="Sdate" placeholder="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label dark:text-gray-200 font-normal" for="Ddate">Due Date</label>
+                                                                        <input type="text" class="form-input" id="Ddate" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <button class="btn bg-success text-white transition-all" data-fc-dismiss type="button">Save</button>
+                                                            <button class="btn bg-danger text-white transition-all" data-fc-dismiss type="button">Cancel</button>
+                                                        </form>
+                                                    </div>
+                                                </div><!-- End Modal Content -->
+                                            </div><!-- End Standard Modal -->
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end company-list-1-->
+                            </div>
+
+                            <div>
+                                <div class="flex flex-col flex-shrink-0 rounded-md card p-4">
+
+                                    <div class="flex items-center justify-between mb-5">
+                                        <div>
+                                            <h5 class="text-lg text-warning">In Progress</h5>
+                                        </div>
+
+                                        <div class="z-10">
+                                            <button data-fc-target="dropdown-target2" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                <i class="mdi mdi-dots-vertical text-xl"></i>
+                                            </button>
+    
+                                            <div id="dropdown-target2" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                    Action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Another action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Something else
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Separated link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-4 kanban-board custom-scroll overflow-x-hidden overflow-y-auto px-1 h-full" id="kanbanborad-two">
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">File Uploads on cards</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-danger text-white">Urgent</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-6.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Enable analytics tracking</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-warning text-white">High</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-7.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Improve animation loader</a>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-8.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex flex-wrap gap-3">
+                                            <div class="mx-auto">
+                                                <button class="btn bg-primary text-white rounded" data-fc-target="default-modal" data-fc-type="modal" type="button">+ Add New</button>
+
+                                                <div id="default-modal" class="pt-60 w-full h-full fixed top-0 left-0 z-50 transition-all duration-500 hidden overflow-y-auto">
+                                                    <div class="-translate-y-5 fc-modal-open:translate-y-0 fc-modal-open:opacity-100 opacity-0 duration-300 ease-in-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto flex flex-col bg-white shadow-sm rounded dark:bg-gray-800">
+                                                        <div class="flex justify-between items-center py-2.5 px-4 border-b dark:border-gray-700">
+                                                            <h3 class="font-medium text-gray-600 dark:text-white text-lg">
+                                                                Modal Title
+                                                            </h3>
+                                                            <button class="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 dark:text-gray-200" data-fc-dismiss type="button">
+                                                                <span class="mdi mdi-window-close text-2xl"></span>
+                                                            </button>
+                                                        </div><!-- End Modal Header -->
+                                                        <form role="form" class="p-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="name">Task Name</label><br>
+                                                                <input type="text" class="form-input" id="name" placeholder="">
+                                                            </div>
+
+                                                            <div class="grid grid-cols-2 gap-5 mt-5">
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="assign">Assign to</label>
+                                                                        <input type="text" class="form-input" id="assign" placeholder="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="priority">Priority</label>
+                                                                        <input type="text" class="form-input" id="priority" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-2 gap-5 mt-5">
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="Sdate">Start Date</label>
+                                                                        <input type="text" class="form-input" id="Sdate" placeholder="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="Ddate">Due Date</label>
+                                                                        <input type="text" class="form-input" id="Ddate" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <button class="btn bg-success text-white transition-all" data-fc-dismiss type="button">Save</button>
+                                                            <button class="btn bg-danger text-white transition-all" data-fc-dismiss type="button">Cancel</button>
+                                                        </form>
+                                                    </div>
+                                                </div><!-- End Modal Content -->
+                                            </div><!-- End Standard Modal -->
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end company-list-1-->
+                            </div>
+
+                            <div>
+                                <div class="flex flex-col flex-shrink-0 rounded-md card p-4">
+
+                                    <div class="flex items-center justify-between mb-5">
+                                        <div>
+                                            <h5 class="text-lg text-success">Complete</h5>
+                                        </div>
+
+                                        <div class="z-10">
+                                            <button data-fc-target="dropdown-target3" data-fc-type="dropdown" type="button" data-fc-placement="bottom-end">
+                                                <i class="mdi mdi-dots-vertical text-xl"></i>
+                                            </button>
+    
+                                            <div id="dropdown-target3" class="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800">
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200" href="javascript:void(0)">
+                                                    Action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Another action
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Something else
+                                                </a>
+                                                <a class="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:void(0)">
+                                                    Separated link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-4 kanban-board custom-scroll overflow-x-hidden overflow-y-auto px-1 h-full" id="kanbanborad-three">
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Improve animation loader</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-danger text-white">Urgent</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-9.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Write a release note for Admin v1.5</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-warning text-white">High</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-1.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Invite user to a project</a>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-2.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Task Item -->
+                                        <div class="border card shadow-none cursor-pointer mb-5 dark:border-gray-700">
+                                            <div class="p-6 flex items-start gap-5">
+                                                <div class="">
+                                                    <div class="form-check form-check-success ">
+                                                        <input class="form-checkbox rounded text-primary" type="checkbox" id="singleCheckbox2" value="option2" aria-label="Single checkbox Two">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow">
+                                                    <div class="flex justify-between items-center">
+                                                        <h5 class="mb-2">
+                                                            <a href="#" type="button" class="text-base font-semibold text-gray-700 dark:text-white">Code HTML email template for welcome email</a>
+                                                        </h5>
+                                                        <span class="inline-flex items-center gap-1.5 px-1 rounded text-xs font-medium bg-danger text-white">Urgent</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="flex items-center gap-4 relative">
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <img src="assets/images/users/user-3.jpg" alt="" class="rounded-full h-8 w-8">
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    Username
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-format-align-left text-lg "></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    5 Tasks
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <span class="pt-2" data-fc-type="tooltip" data-fc-placement="top">
+                                                                    <i class="mdi mdi-comment-outline text-lg"></i>
+                                                                </span>
+                                                                <div class="bg-black px-2 py-1 rounded transition-all text-white z-50 absolute open opacity-0 hidden" role="tooltip">
+                                                                    3 Comments
+                                                                    <div data-fc-arrow="" class="bg-black w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px] absolute"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- flex end -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex flex-wrap gap-3">
+                                            <div class="mx-auto">
+                                                <button class="btn bg-primary text-white rounded" data-fc-target="default-modal" data-fc-type="modal" type="button">+ Add New</button>
+
+                                                <div id="default-modal" class="pt-60 w-full h-full fixed top-0 left-0 z-50 transition-all duration-500 hidden overflow-y-auto">
+                                                    <div class="-translate-y-5 fc-modal-open:translate-y-0 fc-modal-open:opacity-100 opacity-0 duration-300 ease-in-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto flex flex-col bg-white shadow-sm rounded dark:bg-gray-800">
+                                                        <div class="flex justify-between items-center py-2.5 px-4 border-b dark:border-gray-700">
+                                                            <h3 class="font-medium text-gray-600 dark:text-white text-lg">
+                                                                Modal Title
+                                                            </h3>
+                                                            <button class="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 dark:text-gray-200" data-fc-dismiss type="button">
+                                                                <span class="mdi mdi-window-close text-2xl"></span>
+                                                            </button>
+                                                        </div><!-- End Modal Header -->
+                                                        <form role="form" class="p-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="name">Task Name</label><br>
+                                                                <input type="text" class="form-input" id="name" placeholder="">
+                                                            </div>
+
+                                                            <div class="grid grid-cols-2 gap-5 mt-5">
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="assign">Assign to</label>
+                                                                        <input type="text" class="form-input" id="assign" placeholder="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="priority">Priority</label>
+                                                                        <input type="text" class="form-input" id="priority" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-2 gap-5 mt-5">
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="Sdate">Start Date</label>
+                                                                        <input type="text" class="form-input" id="Sdate" placeholder="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="Ddate">Due Date</label>
+                                                                        <input type="text" class="form-input" id="Ddate" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <button class="btn bg-success text-white transition-all" data-fc-dismiss type="button">Save</button>
+                                                            <button class="btn bg-danger text-white transition-all" data-fc-dismiss type="button">Cancel</button>
+                                                        </form>
+                                                    </div>
+                                                </div><!-- End Modal Content -->
+                                            </div><!-- End Standard Modal -->
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end company-list-1-->
+                            </div>
+
+                        </div> <!-- end grid-->
+                    </div>
+                </div>
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+    
+    @@include('./partials/footer-scripts.html')
+    
+    <!-- Sortablejs -->
+    <script src="assets/libs/sortablejs/Sortable.min.js"></script>
+
+    <script src="assets/js/pages/apps-kanban.init.js"></script>
+
+</body>
+
+</html>

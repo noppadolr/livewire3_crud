@@ -1,0 +1,104 @@
+@@include('./partials/main.html')
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Validation"})
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div class="flex wrapper">
+
+        @@include('./partials/menu.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="page-content">
+
+            @@include("./partials/topbar.html", {"title":"Validation"})
+
+            <main class="p-6">
+
+                <div class="card">
+                    <div class="p-6">
+                        <h4 class="card-title mb-6">Browser defaults</h4>
+
+                        <div class="grid lg:grid-cols-2 gap-5">
+
+                            <div>
+                                <label for="validationDefault01" class="block mb-2">First name</label>
+                                <input type="text" class="form-input" id="validationDefault01" value="Mark" required>
+                            </div> <!-- end -->
+
+                            <div>
+                                <label for="validationDefault02" class="block mb-2">Last name</label>
+                                <input type="text" class="form-input" id="validationDefault02" value="Otto" required>
+                            </div> <!-- end -->
+
+                            <div>
+                                <label for="validationDefaultUsername" class="block mb-2">Username</label>
+                                <div class="flex items-center">
+                                    <span class="btn bg-light border border-gray-200 rounded-e-none dark:border-gray-600 dark:bg-gray-600" id="inputGroupPrepend2">@</span>
+                                    <input type="text" class="form-input border-s-0 rounded-s-none" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                                </div>
+                            </div> <!-- end -->
+
+                            <div>
+                                <label for="validationDefault03" class="block mb-2">City</label>
+                                <input type="text" class="form-input" id="validationDefault03" required>
+                            </div> <!-- end -->
+
+                            <div>
+                                <label for="validationDefault04" class="block mb-2">State</label>
+                                <select class="form-select" id="validationDefault04" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div> <!-- end -->
+
+                            <div>
+                                <label for="validationDefault05" class="block mb-2">Zip</label>
+                                <input type="text" class="form-input" id="validationDefault05" required>
+                            </div> <!-- end -->
+
+                            <div class="lg:col-span-2 mt-3">
+                                <div class="flex items-center">
+                                    <input class="form-checkbox rounded" type="checkbox" value="" id="invalidCheck2" required>
+                                    <label class="ms-1.5" for="invalidCheck2">
+                                        Agree to terms and conditions
+                                    </label>
+                                </div>
+                            </div> <!-- end -->
+
+                            <div class="lg:col-span-2 mt-3">
+                                <button class="btn bg-primary text-white" type="submit">Submit form</button>
+                            </div> <!-- end button -->
+
+                        </div>
+
+                    </div>
+                </div> <!-- end card -->
+
+            </main>
+
+            @@include('./partials/footer.html')
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    @@include('./partials/customizer.html')
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>
